@@ -31,7 +31,7 @@ After your first deployment:
 2. Navigate to **Site Settings > Forms**
 3. You'll see the "contact" form listed
 4. Click **Form notifications**
-5. Add **Email notification** to send submissions to `hello@selflabs.com`
+5. Add **Email notification** to send submissions to `support@self-labs.io`
 6. You can also set up Slack notifications if desired
 
 ### 3. View Submissions

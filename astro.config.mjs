@@ -6,7 +6,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   // add your domain name here
-  site: 'https://selflabs.com',
+  site: 'https://self-labs.io',
   compressHTML: true,
   integrations: [sitemap()]
 });
