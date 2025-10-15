@@ -1,0 +1,106 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BgGrid from "@/components/assets/BgGrid.astro";
+---
+
+<BaseLayout>
+  <section class="border-white/20 border-b">
+    <div class="p-8 relative">
+      <BgGrid />
+      <h1 class="text-white font-black uppercase text-3xl lg:text-5xl mb-8">
+        Terms & Conditions
+      </h1>
+      
+      <div class="text-white space-y-6 max-w-4xl">
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">1. Agreement to Terms</h2>
+          <p class="text-eagle leading-relaxed">
+            By accessing or using Self Labs services, you agree to be bound by these Terms and Conditions. 
+            If you disagree with any part of these terms, you may not access our services.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">2. Services</h2>
+          <p class="text-eagle leading-relaxed">
+            Self Labs provides website design, development, and maintenance services. We offer both one-time 
+            website builds ($300-$2,500+) and monthly maintenance retainer packages ($50-$200/month).
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">3. Payment Terms</h2>
+          <p class="text-eagle leading-relaxed">
+            Payment is required according to the terms specified in your project agreement. For one-time builds, 
+            a deposit may be required before work begins. Monthly retainer fees are billed at the beginning of 
+            each month. All payments are non-refundable once work has commenced.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">4. Ownership & Code</h2>
+          <p class="text-eagle leading-relaxed">
+            Upon full payment for one-time website builds, you own the code and all deliverables. Self Labs 
+            retains the right to showcase the work in our portfolio unless otherwise agreed in writing.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">5. Design Gallery Disclaimer</h2>
+          <p class="text-eagle leading-relaxed">
+            The design gallery displayed on our website is provided for inspiration purposes only. The images 
+            showcased are examples of various design styles and approaches, and do not necessarily represent 
+            work created by Self Labs. These designs are used solely to demonstrate different aesthetic 
+            possibilities and to inspire potential clients. Self Labs does not claim ownership or authorship 
+            of all designs displayed in the inspiration gallery.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">6. Maintenance Services</h2>
+          <p class="text-eagle leading-relaxed">
+            Monthly maintenance services are provided on a subscription basis and can be cancelled with 30 days 
+            notice. Maintenance includes updates, backups, and minor content changes as specified in your plan.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">7. Client Responsibilities</h2>
+          <p class="text-eagle leading-relaxed">
+            Clients are responsible for providing necessary content, feedback, and approvals in a timely manner. 
+            Delays caused by client unavailability may result in extended project timelines.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">8. Limitation of Liability</h2>
+          <p class="text-eagle leading-relaxed">
+            Self Labs shall not be liable for any indirect, incidental, special, or consequential damages arising 
+            from the use of our services. Our total liability shall not exceed the amount paid for the specific service.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">9. Modifications</h2>
+          <p class="text-eagle leading-relaxed">
+            We reserve the right to modify these terms at any time. Changes will be effective immediately upon 
+            posting to our website. Your continued use of our services constitutes acceptance of any changes.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">10. Contact</h2>
+          <p class="text-eagle leading-relaxed">
+            If you have any questions about these Terms and Conditions, please contact us at 
+            <a href="mailto:hello@selflabs.com" class="text-orange underline">hello@selflabs.com</a>.
+          </p>
+        </div>
+
+        <p class="text-sm text-eagle pt-6">
+          Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

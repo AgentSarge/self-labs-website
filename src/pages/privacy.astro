@@ -1,0 +1,127 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BgGrid from "@/components/assets/BgGrid.astro";
+---
+
+<BaseLayout>
+  <section class="border-white/20 border-b">
+    <div class="p-8 relative">
+      <BgGrid />
+      <h1 class="text-white font-black uppercase text-3xl lg:text-5xl mb-8">
+        Privacy Policy
+      </h1>
+      
+      <div class="text-white space-y-6 max-w-4xl">
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">1. Information We Collect</h2>
+          <p class="text-eagle leading-relaxed mb-3">
+            We collect information you provide directly to us when you:
+          </p>
+          <ul class="list-disc list-inside text-eagle space-y-2 ml-4">
+            <li>Fill out our contact form</li>
+            <li>Request a quote or consultation</li>
+            <li>Subscribe to our services</li>
+            <li>Communicate with us via email or phone</li>
+          </ul>
+          <p class="text-eagle leading-relaxed mt-3">
+            This may include your name, email address, phone number, project details, and any other 
+            information you choose to provide.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">2. How We Use Your Information</h2>
+          <p class="text-eagle leading-relaxed mb-3">
+            We use the information we collect to:
+          </p>
+          <ul class="list-disc list-inside text-eagle space-y-2 ml-4">
+            <li>Respond to your inquiries and provide customer service</li>
+            <li>Process your orders and deliver our services</li>
+            <li>Send you updates about your project</li>
+            <li>Improve our services and website</li>
+            <li>Comply with legal obligations</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">3. Information Sharing</h2>
+          <p class="text-eagle leading-relaxed">
+            We do not sell, trade, or rent your personal information to third parties. We may share your 
+            information with trusted service providers who assist us in operating our website and conducting 
+            our business (such as hosting providers), provided they agree to keep this information confidential.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">4. Cookies and Tracking</h2>
+          <p class="text-eagle leading-relaxed">
+            Our website may use cookies and similar tracking technologies to improve your browsing experience. 
+            You can set your browser to refuse cookies, but this may limit your ability to use certain features 
+            of our website.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">5. Data Security</h2>
+          <p class="text-eagle leading-relaxed">
+            We implement appropriate technical and organizational measures to protect your personal information 
+            against unauthorized access, alteration, disclosure, or destruction. However, no internet transmission 
+            is completely secure, and we cannot guarantee absolute security.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">6. Your Rights</h2>
+          <p class="text-eagle leading-relaxed mb-3">
+            You have the right to:
+          </p>
+          <ul class="list-disc list-inside text-eagle space-y-2 ml-4">
+            <li>Access the personal information we hold about you</li>
+            <li>Request correction of inaccurate information</li>
+            <li>Request deletion of your information</li>
+            <li>Object to our processing of your information</li>
+            <li>Withdraw consent at any time</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">7. Third-Party Services</h2>
+          <p class="text-eagle leading-relaxed">
+            We may use third-party services such as Netlify for hosting and Google Workspace for email. 
+            These services have their own privacy policies, and we encourage you to review them.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">8. Children's Privacy</h2>
+          <p class="text-eagle leading-relaxed">
+            Our services are not directed to children under 13. We do not knowingly collect personal information 
+            from children under 13. If you become aware that a child has provided us with personal information, 
+            please contact us.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">9. Changes to This Policy</h2>
+          <p class="text-eagle leading-relaxed">
+            We may update this Privacy Policy from time to time. We will notify you of any changes by posting 
+            the new policy on this page and updating the "Last updated" date.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">10. Contact Us</h2>
+          <p class="text-eagle leading-relaxed">
+            If you have any questions about this Privacy Policy or how we handle your data, please contact us at 
+            <a href="mailto:hello@selflabs.com" class="text-orange underline">hello@selflabs.com</a>.
+          </p>
+        </div>
+
+        <p class="text-sm text-eagle pt-6">
+          Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

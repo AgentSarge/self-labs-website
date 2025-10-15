@@ -38,6 +38,7 @@ import Hirewise from "@/images/work/hirewise.png";
 import Snowpeak from "@/images/work/snowpeak.png";
 import Enlightr from "@/images/work/enlightr.png";
 import Superstore from "@/images/work/superstore.png";
+import Voltbadge from "@/images/work/voltbadge.png";
 const themes = [
   { name: "Trendspotter", image: Trendspotter },
   { name: "Spaziobianco", image: Spaziobianco },
@@ -76,6 +77,7 @@ const themes = [
   { name: "Enlightr", image: Enlightr },
   { name: "Superstore", image: Superstore },
   { name: "Navy", image: Navy },
+  { name: "Voltbadge", image: Voltbadge },
 ];
 ---
 
@@ -88,7 +90,7 @@ const themes = [
   <div class="px-8 py-6 relative">
     <BgGrid />
     <h2 class="text-3xl font-black text-white uppercase">
-      Designed and developed websites at AstroMax
+      Click through for <span class="text-orange">design inspiration</span>
     </h2>
   </div>
   <div class="relative">
@@ -124,11 +126,11 @@ const themes = [
         >
       </button>
     </div>
-    <div id="keen-slider" class="keen-slider relative">
+    <div id="keen-slider" class="keen-slider relative py-8">
       {
         themes.map(({ name, image }) => (
-          <div class="relative w-full keen-slider__slide ">
-            <Image src={image} width={800} height={800} alt={name} class="aspect-auto" />
+          <div class="relative w-full keen-slider__slide px-3 flex items-center justify-center">
+            <Image src={image} width={800} height={800} alt={name} class="aspect-auto w-full h-auto" />
           </div>
         ))
       }
@@ -186,14 +188,14 @@ const themes = [
         slides: {
           origin: "center",
           perView: 2.2,
-          spacing: 12,
+          spacing: 16,
         },
         breakpoints: {
           "(min-width: 1024px)": {
             slides: {
               origin: "center",
               perView: 3.5,
-              spacing: 0,
+              spacing: 16,
             },
           },
         },

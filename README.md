@@ -1,9 +1,11 @@
-# Astro & Tailwind CSS Starter Kit by lexingtonthemes.com
+# Self Labs
 
-## License
+A modern, professional website for Self Labs - a website design and development business. Built with Astro and Tailwind CSS.
 
-This template is open-source software licensed under the [GPL-3.0 license](https://opensource.org/licenses/GPL-3.0). Feel free to fork, modify, and use it in your projects.
-## Before using this template publicly, please ensure you remove my name and any links associated with me from the website.
+## Our Services
+
+- **One-Time Website Builds**: $300-$2,500+
+- **Monthly Maintenance Retainer**: $50-$200/month
 
 ## This template is using Tailwind CSS V4
 

@@ -5,8 +5,8 @@ export default defineConfig({
    vite: {
     plugins: [tailwindcss()],
   },
-  // add yur domain name here
-  site: 'https://lexingtonthemes.com',
+  // add your domain name here
+  site: 'https://selflabs.com',
   compressHTML: true,
   integrations: [sitemap()]
 });
