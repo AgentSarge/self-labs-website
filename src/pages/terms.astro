@@ -1,9 +1,16 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BgGrid from "@/components/assets/BgGrid.astro";
+
+const seoProps = {
+  title: "Terms and Conditions | Self Labs",
+  description: "Read our terms and conditions for using Self Labs website design and development services. Understand your rights and responsibilities.",
+  canonical: "/terms",
+  ogType: "website"
+};
 ---
 
-<BaseLayout>
+<BaseLayout {...seoProps}>
   <section class="border-white/20 border-b">
     <div class="p-8 relative">
       <BgGrid />
@@ -81,7 +88,85 @@ import BgGrid from "@/components/assets/BgGrid.astro";
         </div>
 
         <div>
-          <h2 class="text-2xl font-bold text-orange mb-3">9. Modifications</h2>
+          <h2 class="text-2xl font-bold text-orange mb-3">9. Refund & Satisfaction Guarantee</h2>
+          
+          <p class="text-eagle leading-relaxed mb-4">
+            At Self Labs, we're committed to your complete satisfaction. We stand behind the quality of our work 
+            and offer the following guarantee on all services:
+          </p>
+
+          <h3 class="text-xl font-bold text-white mb-3 mt-6">Our Quality Promise</h3>
+          <p class="text-eagle leading-relaxed mb-4">
+            We believe in doing the job right. Every project includes multiple revision rounds and client approval 
+            at key milestones. We won't consider a project complete until you're happy with the result.
+          </p>
+
+          <h3 class="text-xl font-bold text-white mb-3 mt-6">Refund Eligibility</h3>
+          <p class="text-eagle leading-relaxed mb-4">
+            Refunds are available under the following conditions:
+          </p>
+          <ul class="list-disc list-inside text-eagle space-y-2 mb-4 ml-4">
+            <li><strong>Pre-Project Cancellation:</strong> 100% refund if you cancel before work begins (within 48 hours of payment)</li>
+            <li><strong>Early-Stage Cancellation:</strong> 75% refund if you cancel within the first week and before initial design delivery</li>
+            <li><strong>Mid-Project Cancellation:</strong> 50% refund if you cancel after initial design approval but before final delivery</li>
+            <li><strong>Quality Issues:</strong> Full or partial refund if we fail to meet agreed-upon specifications after reasonable revision attempts</li>
+            <li><strong>Monthly Services:</strong> Cancel anytime with 30-day notice; refund of unused portion on a pro-rata basis</li>
+          </ul>
+
+          <h3 class="text-xl font-bold text-white mb-3 mt-6">Refunds Are NOT Available When:</h3>
+          <ul class="list-disc list-inside text-eagle space-y-2 mb-4 ml-4">
+            <li>Project is completed and approved by client according to agreed specifications</li>
+            <li>Client fails to respond to communications or provide required materials within 30 days</li>
+            <li>Changes in client preferences after approval of designs/deliverables</li>
+            <li>Third-party costs have been incurred (domain registration, hosting, plugins, etc.)</li>
+            <li>Client violates terms of service or engages in abusive behavior</li>
+            <li>Refund request is made more than 14 days after final project delivery</li>
+          </ul>
+
+          <h3 class="text-xl font-bold text-white mb-3 mt-6">Our Revision Process</h3>
+          <p class="text-eagle leading-relaxed mb-4">
+            Before requesting a refund, we encourage you to work with us through our revision process:
+          </p>
+          <ul class="list-disc list-inside text-eagle space-y-2 mb-4 ml-4">
+            <li>All packages include multiple revision rounds at no extra cost</li>
+            <li>Clear communication of concerns and desired changes</li>
+            <li>Opportunity to address issues before project completion</li>
+            <li>Good-faith collaboration to achieve your vision</li>
+          </ul>
+
+          <h3 class="text-xl font-bold text-white mb-3 mt-6">Alternative Resolution</h3>
+          <p class="text-eagle leading-relaxed mb-4">
+            In cases where a full refund may not be applicable, we may offer:
+          </p>
+          <ul class="list-disc list-inside text-eagle space-y-2 mb-4 ml-4">
+            <li>Store credit toward future services (125% of refund amount)</li>
+            <li>Additional revision rounds to address concerns</li>
+            <li>Partial refund based on work completed</li>
+            <li>Service package upgrade or modification</li>
+          </ul>
+
+          <h3 class="text-xl font-bold text-white mb-3 mt-6">How to Request a Refund</h3>
+          <p class="text-eagle leading-relaxed mb-4">
+            To request a refund, please email <a href="mailto:support@self-labs.io" class="text-orange underline">support@self-labs.io</a> 
+            with your order number and detailed explanation. We'll review your request within 2 business days and work with you 
+            to find a fair resolution. Approved refunds are processed within 5-10 business days.
+          </p>
+
+          <h3 class="text-xl font-bold text-white mb-3 mt-6">Money-Back Guarantee</h3>
+          <p class="text-eagle leading-relaxed mb-4">
+            <strong>First-Time Clients:</strong> If you're working with us for the first time and aren't satisfied 
+            with our work after the first design milestone, we'll either revise until you're happy or provide a full 
+            refund—no questions asked. Your satisfaction is our priority.
+          </p>
+
+          <p class="text-eagle leading-relaxed mt-6 text-sm italic">
+            This refund policy applies to services purchased directly from Self Labs. For purchases made through 
+            third-party platforms (including ChatGPT Instant Checkout), the platform's refund policies may also apply.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-orange mb-3">10. Modifications</h2>
           <p class="text-eagle leading-relaxed">
             We reserve the right to modify these terms at any time. Changes will be effective immediately upon 
             posting to our website. Your continued use of our services constitutes acceptance of any changes.
@@ -89,7 +174,7 @@ import BgGrid from "@/components/assets/BgGrid.astro";
         </div>
 
         <div>
-          <h2 class="text-2xl font-bold text-orange mb-3">10. Contact</h2>
+          <h2 class="text-2xl font-bold text-orange mb-3">11. Contact</h2>
           <p class="text-eagle leading-relaxed">
             If you have any questions about these Terms and Conditions, please contact us at 
             <a href="mailto:support@self-labs.io" class="text-orange underline">support@self-labs.io</a>.

@@ -6,10 +6,41 @@ import Intro from "@/components/landing/Intro.astro";
 import Services from "@/components/landing/Services.astro";
 import Cta from "@/components/landing/Cta.astro";
 
+const seoProps = {
+  title: "Self Labs - Professional Website Design & Development",
+  description: "Professional website design and development. One-time builds starting at $300 or monthly maintenance packages from $50/month. Fast, affordable, and reliable.",
+  canonical: "/",
+  ogType: "website",
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Self Labs",
+    "description": "Professional website design and development services",
+    "url": "https://self-labs.io",
+    "logo": "https://self-labs.io/favicons/apple-touch-icon.png",
+    "email": "support@self-labs.io",
+    "priceRange": "$300-$2500+",
+    "serviceType": ["Website Design", "Website Development", "Website Maintenance"],
+    "areaServed": "US",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "One-Time Website Build",
+        "priceRange": "$300-$2500+",
+        "description": "Custom website design and development"
+      },
+      {
+        "@type": "Offer",
+        "name": "Monthly Maintenance Package",
+        "priceRange": "$50-$200/month",
+        "description": "Ongoing website maintenance and support"
+      }
+    ]
+  }
+};
 ---
 
-
-<BaseLayout>
+<BaseLayout {...seoProps}>
   <Hero />
   <Work />
   <Intro />

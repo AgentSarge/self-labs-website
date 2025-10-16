@@ -1,9 +1,16 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BgGrid from "@/components/assets/BgGrid.astro";
+
+const seoProps = {
+  title: "Privacy Policy | Self Labs",
+  description: "Learn how Self Labs collects, uses, and protects your personal information. We are committed to maintaining your privacy and data security.",
+  canonical: "/privacy",
+  ogType: "website"
+};
 ---
 
-<BaseLayout>
+<BaseLayout {...seoProps}>
   <section class="border-white/20 border-b">
     <div class="p-8 relative">
       <BgGrid />
