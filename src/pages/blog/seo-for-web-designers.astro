@@ -111,29 +111,29 @@ const author = "Will Sargent";
               Proper HTML structure is the foundation of SEO-friendly design. Use semantic HTML elements to help search engines understand your content.
             </p>
             <div class="bg-black/20 p-4 rounded border border-white/10">
-              <pre class="text-sm text-gray-300"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-    &lt;title&gt;Page Title | Site Name&lt;/title&gt;
-    &lt;meta name="description" content="Page description"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;header&gt;
-        &lt;nav&gt;&lt;/nav&gt;
-    &lt;/header&gt;
-    &lt;main&gt;
-        &lt;article&gt;
-            &lt;h1&gt;Main Heading&lt;/h1&gt;
-            &lt;section&gt;
-                &lt;h2&gt;Section Heading&lt;/h2&gt;
-            &lt;/section&gt;
-        &lt;/article&gt;
-    &lt;/main&gt;
-    &lt;footer&gt;&lt;/footer&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+              <pre class="text-sm text-gray-300"><code>{`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Title | Site Name</title>
+    <meta name="description" content="Page description">
+</head>
+<body>
+    <header>
+        <nav></nav>
+    </header>
+    <main>
+        <article>
+            <h1>Main Heading</h1>
+            <section>
+                <h2>Section Heading</h2>
+            </section>
+        </article>
+    </main>
+    <footer></footer>
+</body>
+</html>`}</code></pre>
             </div>
           </div>
 
@@ -169,20 +169,20 @@ const author = "Will Sargent";
               Meta tags provide crucial information to search engines about your pages. Implement these essential tags in your designs.
             </p>
             <div class="bg-black/20 p-4 rounded border border-white/10">
-              <pre class="text-sm text-gray-300"><code>&lt;head&gt;
-    &lt;title&gt;Page Title | Brand Name&lt;/title&gt;
-    &lt;meta name="description" content="Compelling page description"&gt;
-    &lt;meta name="keywords" content="relevant, keywords, here"&gt;
-    &lt;meta name="author" content="Author Name"&gt;
-    &lt;meta name="robots" content="index, follow"&gt;
-    &lt;link rel="canonical" href="https://example.com/page"&gt;
+              <pre class="text-sm text-gray-300"><code>{`<head>
+    <title>Page Title | Brand Name</title>
+    <meta name="description" content="Compelling page description">
+    <meta name="keywords" content="relevant, keywords, here">
+    <meta name="author" content="Author Name">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://example.com/page">
     
-    &lt;!-- Open Graph for Social Media --&gt;
-    &lt;meta property="og:title" content="Page Title"&gt;
-    &lt;meta property="og:description" content="Page description"&gt;
-    &lt;meta property="og:image" content="https://example.com/image.jpg"&gt;
-    &lt;meta property="og:url" content="https://example.com/page"&gt;
-&lt;/head&gt;</code></pre>
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Page Title">
+    <meta property="og:description" content="Page description">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:url" content="https://example.com/page">
+</head>`}</code></pre>
             </div>
           </div>
         </div>
@@ -238,13 +238,13 @@ const author = "Will Sargent";
               <div>
                 <h4 class="font-semibold text-white mb-3">Alt Text Examples</h4>
                 <div class="bg-black/20 p-3 rounded border border-white/10">
-                  <pre class="text-sm text-gray-300"><code>&lt;!-- Good --&gt;
-&lt;img src="red-sports-car.jpg" 
-     alt="Red sports car driving on mountain road"&gt;
+                  <pre class="text-sm text-gray-300"><code>{`<!-- Good -->
+<img src="red-sports-car.jpg" 
+     alt="Red sports car driving on mountain road">
 
-&lt;!-- Better --&gt;
-&lt;img src="red-sports-car.jpg" 
-     alt="Red Ferrari sports car driving on scenic mountain road"&gt;</code></pre>
+<!-- Better -->
+<img src="red-sports-car.jpg" 
+     alt="Red Ferrari sports car driving on scenic mountain road">`}</code></pre>
                 </div>
               </div>
             </div>
@@ -276,7 +276,7 @@ const author = "Will Sargent";
             Structured data helps search engines understand your content better and can result in rich snippets in search results. It's implemented using Schema.org markup.
           </p>
           <div class="bg-black/20 p-4 rounded border border-white/10">
-            <pre class="text-sm text-gray-300"><code>&lt;script type="application/ld+json"&gt;
+            <pre class="text-sm text-gray-300"><code>{`<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -294,7 +294,7 @@ const author = "Will Sargent";
   },
   "openingHours": "Mo-Fr 09:00-17:00"
 }
-&lt;/script&gt;</code></pre>
+</script>`}</code></pre>
           </div>
         </div>
 
