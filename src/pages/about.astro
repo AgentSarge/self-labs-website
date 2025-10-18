@@ -1,0 +1,227 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BgGrid from "@/components/assets/BgGrid.astro";
+
+const seoProps = {
+  title: "About Will Sargent | Self Labs Web Design | Monroe, GA",
+  description: "Meet Will Sargent, founder of Self Labs. 5+ years helping Georgia businesses get found online. Local Monroe web designer with transparent pricing and proven results.",
+  canonical: "/about",
+  ogType: "profile",
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Will Sargent",
+    "jobTitle": "Web Designer & Developer",
+    "description": "Founder of Self Labs Web Design, helping Georgia businesses get found online",
+    "url": "https://self-labs.io/about",
+    "image": "https://self-labs.io/will-sargent-photo.jpg",
+    "email": "support@self-labs.io",
+    "telephone": "+1-943-234-9570",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Monroe",
+      "addressRegion": "GA",
+      "addressCountry": "US"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Self Labs",
+      "url": "https://self-labs.io"
+    },
+    "knowsAbout": [
+      "Web Design",
+      "Website Development", 
+      "Local SEO",
+      "Digital Marketing",
+      "E-commerce Development",
+      "Mobile Responsive Design"
+    ]
+  }
+};
+---
+
+<BaseLayout {...seoProps}>
+  <main class="px-4 py-16 md:px-8 lg:px-12">
+    <div class="mx-auto max-w-4xl">
+      <!-- Hero Section -->
+      <section class="text-center mb-16">
+        <div class="relative mb-8">
+          <BgGrid />
+          <div class="bg-white/5 p-8 rounded-lg border border-white/10">
+            <h1 class="text-4xl md:text-6xl font-black text-white mb-6">
+              Meet <span class="text-orange">Will Sargent</span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-6">
+              Founder of Self Labs & Your Local Web Design Expert
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <button data-open-contact class="bg-orange text-white px-8 py-3 rounded-lg hover:bg-orange/90 transition-colors">
+                Let's Work Together
+              </button>
+              <a href="tel:+1-943-234-9570" class="border border-orange text-orange px-8 py-3 rounded-lg hover:bg-orange/10 transition-colors">
+                Call: (943) 234-9570
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Background Story -->
+      <section class="mb-16">
+        <div class="bg-white/5 p-8 rounded-lg border border-white/10">
+          <h2 class="text-3xl font-bold text-white mb-6">My Story</h2>
+          <div class="prose prose-invert max-w-none">
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">
+              Hey there! I'm Will Sargent, and I've been helping Georgia businesses get found online for over 5 years. 
+              Born and raised in Monroe, I understand what makes our local businesses special and what they need to succeed online.
+            </p>
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">
+              My journey into web design wasn't traditional. I started at Kennesaw State for one semester, then jumped into door-to-door 
+              sales for alarm systems. From there, I moved into solar sales and eventually started my own solar dealer organization. 
+              While that business eventually failed, I kept finding myself building websites over and over again - and I got really good at it.
+            </p>
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">
+              Today, I run two companies: Self Labs for web design and Volt Badge (voltbadge.com), a voice-activated sales coaching device 
+              that captures and analyzes sales conversations. The technical skills I've developed - from hardware design to mobile app 
+              development - all come together to serve Georgia businesses with comprehensive web solutions.
+            </p>
+            <p class="text-gray-300 text-lg leading-relaxed">
+              My approach is simple: no jargon, no hidden fees, just websites that actually work. I bring real-world business 
+              experience and technical expertise to every project.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Expertise & Skills -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">What I Bring to Your Project</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <div class="text-4xl mb-4">💻</div>
+            <h3 class="text-xl font-bold mb-3 text-orange">Technical Expertise</h3>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Modern web frameworks (React, Astro, Next.js)</li>
+              <li>• Mobile-responsive design</li>
+              <li>• E-commerce development</li>
+              <li>• Performance optimization</li>
+            </ul>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <div class="text-4xl mb-4">🎯</div>
+            <h3 class="text-xl font-bold mb-3 text-orange">Local SEO Mastery</h3>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Google My Business optimization</li>
+              <li>• Local keyword research</li>
+              <li>• Citation building</li>
+              <li>• Review management</li>
+            </ul>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <div class="text-4xl mb-4">🤝</div>
+            <h3 class="text-xl font-bold mb-3 text-orange">Business Understanding</h3>
+            <ul class="text-gray-300 space-y-2">
+              <li>• 5+ years local business experience</li>
+              <li>• Transparent pricing model</li>
+              <li>• Fast turnaround times</li>
+              <li>• Ongoing support & maintenance</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Philosophy & Approach -->
+      <section class="mb-16">
+        <div class="bg-orange/10 border border-orange/20 rounded-lg p-8">
+          <h2 class="text-3xl font-bold text-white mb-6">My Philosophy</h2>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold mb-4 text-orange">Why Transparent Pricing?</h3>
+              <p class="text-gray-300 mb-4">
+                I believe you should know exactly what you're paying for. No surprise fees, no hidden costs. 
+                That's why I offer fixed-price builds and clear monthly maintenance packages.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-4 text-orange">Why Local Focus?</h3>
+              <p class="text-gray-300 mb-4">
+                Georgia businesses deserve personalized service, not cookie-cutter solutions. I understand 
+                our local market and what makes businesses here successful.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-4 text-orange">Why Fast Delivery?</h3>
+              <p class="text-gray-300 mb-4">
+                Your time is valuable. Most projects are completed in 2-3 weeks, not months. 
+                I focus on what matters: getting your business online quickly and effectively.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-4 text-orange">Why Ongoing Support?</h3>
+              <p class="text-gray-300 mb-4">
+                A website isn't a one-time project. I'm here for the long haul with maintenance, 
+                updates, and support when you need it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Community Involvement -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">Community Involvement</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white/5 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-orange">🏛️ Monroe Business Community</h3>
+            <p class="text-gray-300 mb-4">
+              I believe in supporting the local community and helping Georgia businesses succeed online. 
+              My focus is on delivering real results for local businesses.
+            </p>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Local business focus</li>
+              <li>• Community-oriented approach</li>
+              <li>• Supporting Georgia entrepreneurs</li>
+            </ul>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-orange">⚡ Volt Badge Innovation</h3>
+            <p class="text-gray-300 mb-4">
+              Founder and owner of Volt Badge (voltbadge.com), a voice-activated sales coaching device that captures and analyzes 
+              sales conversations. This hands-on experience with hardware, firmware, and mobile app development translates 
+              directly to better web solutions for clients.
+            </p>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Voice-activated sales coaching technology</li>
+              <li>• Hardware design & firmware development</li>
+              <li>• Mobile app creation</li>
+              <li>• Sales performance analytics</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Call to Action -->
+      <section class="text-center">
+        <div class="bg-white/5 p-8 rounded-lg border border-white/10">
+          <h2 class="text-3xl font-bold text-white mb-6">Ready to Work Together?</h2>
+          <p class="text-xl text-gray-300 mb-8">
+            Let's discuss your project and see how I can help your business get found online. 
+            I offer free consultations and website audits to all potential clients.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button data-open-contact class="bg-orange text-white px-8 py-3 rounded-lg hover:bg-orange/90 transition-colors">
+              Get Your Free Consultation
+            </button>
+            <a href="tel:+1-943-234-9570" class="border border-orange text-orange px-8 py-3 rounded-lg hover:bg-orange/10 transition-colors">
+              Call: (943) 234-9570
+            </a>
+          </div>
+          <p class="text-gray-400 mt-4 text-sm">
+            Based in Monroe, GA • Serving all of Georgia • Available for in-person meetings
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
