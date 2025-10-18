@@ -7,6 +7,11 @@
   # Output directory
   publish = "dist"
 
+# Functions configuration for server-side rendering
+[functions]
+  # Enable Netlify Functions for server-side rendering
+  directory = "netlify/functions"
+
 # Build environment variables
 [build.environment]
   NODE_VERSION = "18"
