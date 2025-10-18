@@ -2,7 +2,10 @@ export const prerender = true;
 
 export function GET() {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://self-labs.io/</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
@@ -77,55 +80,55 @@ export function GET() {
   </url>
   <url>
     <loc>https://self-labs.io/blog/seo-best-practices-2025</loc>
-    <lastmod>2024-12-19T00:00:00.000Z</lastmod>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://self-labs.io/blog/core-web-vitals-guide</loc>
-    <lastmod>2024-12-19T00:00:00.000Z</lastmod>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://self-labs.io/blog/responsive-web-design-seo</loc>
-    <lastmod>2024-12-19T00:00:00.000Z</lastmod>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://self-labs.io/blog/website-speed-optimization</loc>
-    <lastmod>2024-12-19T00:00:00.000Z</lastmod>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://self-labs.io/blog/seo-for-web-designers</loc>
-    <lastmod>2024-12-19T00:00:00.000Z</lastmod>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://self-labs.io/blog/website-design-seo-integration</loc>
-    <lastmod>2024-12-19T00:00:00.000Z</lastmod>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://self-labs.io/blog/monroe-business-website-success</loc>
-    <lastmod>2024-12-19T00:00:00.000Z</lastmod>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://self-labs.io/blog/athens-ga-web-design-guide</loc>
-    <lastmod>2024-12-19T00:00:00.000Z</lastmod>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://self-labs.io/blog/loganville-ga-web-design-tips</loc>
-    <lastmod>2024-12-19T00:00:00.000Z</lastmod>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
