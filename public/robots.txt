@@ -8,4 +8,7 @@ Sitemap: https://self-labs.io/sitemap.xml
 Disallow: /admin/
 Disallow: /private/
 
+# Force re-crawl of homepage
+Crawl-delay: 1
+
 # Allow all search engines to crawl everything else

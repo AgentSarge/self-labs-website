@@ -7,43 +7,102 @@ import Services from "@/components/landing/Services.astro";
 import Cta from "@/components/landing/Cta.astro";
 
 const seoProps = {
-  title: "Self Labs - Professional Website Design & Development",
-  description: "Professional website design and development. One-time builds starting at $300 or monthly maintenance packages from $50/month. Fast, affordable, and reliable.",
+  title: "Self Labs - Professional Website Design & Development in Georgia",
+  description: "Professional website design and development services in Monroe, Athens, and across Georgia. One-time builds starting at $300 or monthly maintenance packages from $50/month. Fast, affordable, and reliable web design.",
   canonical: "/",
   ogType: "website",
   structuredData: {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Self Labs",
-    "description": "Professional website design and development services",
+    "alternateName": "Self Labs Web Design",
+    "description": "Professional website design and development services for Georgia businesses",
     "url": "https://self-labs.io",
     "logo": "https://self-labs.io/favicons/apple-touch-icon.png",
     "email": "support@self-labs.io",
+    "telephone": "+1-943-234-9570",
     "priceRange": "$300-$2500+",
-    "serviceType": ["Website Design", "Website Development", "Website Maintenance"],
+    "serviceType": ["Website Design", "Website Development", "Website Maintenance", "SEO Services"],
     "areaServed": [
-      "Monroe, GA",
-      "Athens, GA", 
-      "Loganville, GA",
-      "Covington, GA",
-      "Lawrenceville, GA",
-      "Winder, GA",
-      "Social Circle, GA"
+      {
+        "@type": "City",
+        "name": "Monroe, GA"
+      },
+      {
+        "@type": "City", 
+        "name": "Athens, GA"
+      },
+      {
+        "@type": "City",
+        "name": "Loganville, GA"
+      },
+      {
+        "@type": "City",
+        "name": "Covington, GA"
+      },
+      {
+        "@type": "City",
+        "name": "Lawrenceville, GA"
+      },
+      {
+        "@type": "City",
+        "name": "Winder, GA"
+      },
+      {
+        "@type": "City",
+        "name": "Social Circle, GA"
+      }
     ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Monroe",
+      "addressRegion": "GA",
+      "addressCountry": "US"
+    },
     "offers": [
       {
         "@type": "Offer",
         "name": "One-Time Website Build",
         "priceRange": "$300-$2500+",
-        "description": "Custom website design and development"
+        "description": "Custom website design and development for Georgia businesses"
       },
       {
         "@type": "Offer",
         "name": "Monthly Maintenance Package",
         "priceRange": "$50-$200/month",
-        "description": "Ongoing website maintenance and support"
+        "description": "Ongoing website maintenance and support for Georgia businesses"
       }
-    ]
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Web Design Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom Website Design",
+            "description": "Professional website design for Georgia businesses"
+          }
+        },
+        {
+          "@type": "Offer", 
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Website Development",
+            "description": "Custom website development and programming"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service", 
+            "name": "Website Maintenance",
+            "description": "Ongoing website maintenance and updates"
+          }
+        }
+      ]
+    }
   }
 };
 ---

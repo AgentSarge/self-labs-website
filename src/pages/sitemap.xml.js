@@ -6,12 +6,12 @@ export function GET() {
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <url>
-    <loc>https://self-labs.io/</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+          <url>
+            <loc>https://self-labs.io/</loc>
+            <lastmod>2024-12-19T15:30:00+00:00</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>1.0</priority>
+          </url>
   <url>
     <loc>https://self-labs.io/contact</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
