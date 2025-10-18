@@ -1,14 +1,19 @@
 import type { APIRoute } from 'astro';
 
+export const prerender = false;
+
 export const POST: APIRoute = async ({ request }) => {
   try {
     const { priceId, productName, isSubscription } = await request.json();
 
-    // TODO: Replace with your actual Stripe Secret Key
-    // Get it from: https://dashboard.stripe.com/apikeys
-    const STRIPE_SECRET_KEY = import.meta.env.STRIPE_SECRET_KEY;
+    // Get Stripe Secret Key from environment - try both methods and sanitize
+    const STRIPE_SECRET_KEY_RAW = process.env.STRIPE_SECRET_KEY || import.meta.env.STRIPE_SECRET_KEY;
+    const STRIPE_SECRET_KEY = (STRIPE_SECRET_KEY_RAW || '')
+      .trim()
+      .replace(/^['"]|['"]$/g, '');
 
     if (!STRIPE_SECRET_KEY) {
+      console.error('STRIPE_SECRET_KEY is not defined');
       return new Response(
         JSON.stringify({ 
           error: 'Stripe is not configured. Please add STRIPE_SECRET_KEY to your .env file.' 
@@ -19,9 +24,8 @@ export const POST: APIRoute = async ({ request }) => {
 
     // Import Stripe dynamically
     const stripe = (await import('stripe')).default;
-    const stripeClient = new stripe(STRIPE_SECRET_KEY, {
-      apiVersion: '2024-11-20.acacia',
-    });
+    // Use account default API version (avoid mismatches)
+    const stripeClient = new stripe(STRIPE_SECRET_KEY);
 
     // Create Checkout Session
     const session = await stripeClient.checkout.sessions.create({

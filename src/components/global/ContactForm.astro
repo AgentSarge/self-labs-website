@@ -7,6 +7,7 @@
   class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4"
 >
   <div
+    id="modal-card"
     class="bg-black border-2 border-white/20 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto relative"
   >
     <!-- Close Button -->
@@ -304,10 +305,11 @@
 
         <!-- Video Call Button -->
         <a
-          href="https://calendly.com/self-labs-support/30min"
-          target="_blank"
-          rel="noopener noreferrer"
+          id="schedule-video-call"
+          href="#"
           class="flex items-center justify-between w-full bg-orange hover:bg-white text-white hover:text-black font-black uppercase py-4 px-6 rounded-full transition-colors duration-200 group"
+          data-calendly-url="https://calendly.com/self-labs-support/30min"
+          role="button"
         >
           <div class="flex items-center">
             <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -320,32 +322,34 @@
           </svg>
         </a>
 
-        <!-- In-Person Meeting Button -->
-        <a
-          href="https://calendly.com/self-labs-support/new-meeting"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex items-center justify-between w-full bg-white/10 hover:bg-white/20 text-white font-black uppercase py-4 px-6 rounded-full transition-colors duration-200 group"
-        >
-          <div class="flex items-center">
-            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-            <span>Schedule In-Person Meeting</span>
-          </div>
-          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </a>
+        
 
-        <!-- Skip Button -->
-        <button
-          id="skip-scheduling"
-          class="w-full text-eagle hover:text-white font-bold uppercase py-3 transition-colors text-sm"
-        >
-          Skip for now
-        </button>
+        <!-- Action Buttons -->
+        <div class="flex gap-4">
+          <button
+            id="skip-scheduling"
+            class="flex-1 text-eagle hover:text-white font-bold uppercase py-3 transition-colors text-sm"
+          >
+            Skip for now
+          </button>
+          <button
+            id="close-after-schedule"
+            class="flex-1 bg-white/10 hover:bg-white/20 text-white font-bold uppercase py-3 transition-colors text-sm"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calendly Inline Container (responsive, shown when scheduling) -->
+    <div id="calendly-container" class="hidden p-0">
+      <div class="flex items-center justify-between px-4 pt-4">
+        <button id="calendly-back" class="text-eagle hover:text-white uppercase text-xs font-bold">← Back</button>
+      </div>
+      <div class="px-4 pb-4">
+        <div id="calendly-inline" class="calendly-inline-widget w-full" style="min-width:320px;height:80vh;">
+        </div>
       </div>
     </div>
   </div>
@@ -360,6 +364,12 @@
   const formContainer = document.getElementById('form-container');
   const successContainer = document.getElementById('success-container');
   const skipButton = document.getElementById('skip-scheduling');
+  const scheduleVideoBtn = document.getElementById('schedule-video-call');
+  const closeAfterScheduleBtn = document.getElementById('close-after-schedule');
+  const calendlyContainer = document.getElementById('calendly-container');
+  const calendlyInline = document.getElementById('calendly-inline');
+  const calendlyBack = document.getElementById('calendly-back');
+  const modalCard = document.getElementById('modal-card');
 
   openModalButtons.forEach(button => {
     button.addEventListener('click', (e) => {
@@ -398,6 +408,60 @@
   // Skip scheduling button
   skipButton?.addEventListener('click', () => {
     closeModal();
+  });
+
+  // Close after scheduling button
+  closeAfterScheduleBtn?.addEventListener('click', () => {
+    closeModal();
+  });
+
+  // Ensure Calendly embed is loaded (script + stylesheet)
+  function ensureCalendlyLoaded() {
+    return new Promise<void>((resolve) => {
+      if (typeof window !== 'undefined' && (window as any).Calendly) {
+        resolve();
+        return;
+      }
+      // Load stylesheet once
+      const existingCss = document.querySelector('link[data-calendly]');
+      if (!existingCss) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://assets.calendly.com/assets/external/widget.css';
+        link.setAttribute('data-calendly', 'true');
+        document.head.appendChild(link);
+      }
+      // Load script once
+      const existing = document.querySelector('script[data-calendly]') as HTMLScriptElement | null;
+      if (existing && (window as any).Calendly) {
+        resolve();
+        return;
+      }
+      const script = existing || document.createElement('script');
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.async = true;
+      script.setAttribute('data-calendly', 'true');
+      script.onload = () => resolve();
+      if (!existing) document.body.appendChild(script);
+    });
+  }
+
+  // Open Calendly popup - simple and reliable
+  scheduleVideoBtn?.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const url = scheduleVideoBtn.getAttribute('data-calendly-url') || '';
+    if (!url) return;
+    
+    // Use direct window.open for reliability
+    window.open(url, '_blank', 'width=800,height=700,scrollbars=yes,resizable=yes');
+  });
+
+  // Back from Calendly inline
+  calendlyBack?.addEventListener('click', () => {
+    calendlyContainer?.classList.add('hidden');
+    successContainer?.classList.remove('hidden');
+    modalCard?.classList.add('max-w-2xl');
+    modalCard?.classList.remove('max-w-4xl');
   });
 
   // Close modal function
