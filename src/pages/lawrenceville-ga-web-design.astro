@@ -1,0 +1,228 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const seoProps = {
+  title: "Web Design Lawrenceville GA | Professional Website Design & Development | Self Labs",
+  description: "Professional web design services in Lawrenceville, GA. Custom websites for Lawrenceville businesses and Gwinnett County. Fast, affordable, and reliable web development starting at $300.",
+  canonical: "/lawrenceville-ga-web-design",
+  ogType: "website",
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Self Labs Web Design",
+    "description": "Professional web design and development services in Lawrenceville, Georgia",
+    "url": "https://self-labs.io/lawrenceville-ga-web-design",
+    "logo": "https://self-labs.io/favicons/apple-touch-icon.png",
+    "email": "support@self-labs.io",
+    "priceRange": "$300-$2500+",
+    "serviceType": ["Website Design", "Website Development", "Website Maintenance", "SEO Services"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lawrenceville",
+      "addressRegion": "GA",
+      "postalCode": "30043"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "33.9562",
+      "longitude": "-83.9880"
+    },
+    "areaServed": [
+      "Lawrenceville, GA",
+      "Monroe, GA",
+      "Duluth, GA",
+      "Norcross, GA",
+      "Lilburn, GA",
+      "Suwanee, GA"
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Lawrenceville Web Design Services",
+        "priceRange": "$300-$2500+",
+        "description": "Custom website design and development for Lawrenceville businesses"
+      },
+      {
+        "@type": "Offer",
+        "name": "Lawrenceville SEO Services",
+        "priceRange": "$200-$1000/month",
+        "description": "Local SEO optimization for Lawrenceville businesses"
+      }
+    ]
+  }
+};
+---
+
+<BaseLayout {...seoProps}>
+  <div class="bg-black text-white min-h-screen">
+    <!-- Lawrenceville Hero Section -->
+    <section class="relative bg-gradient-to-br from-orange/20 to-black py-20 px-4">
+      <div class="max-w-6xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-black mb-6">
+          Web Design Services in <span class="text-orange">Lawrenceville, GA</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-300">
+          Professional website design and development for Lawrenceville businesses and Gwinnett County. 
+          Serving the diverse county seat with modern, fast, and affordable web solutions.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#services" class="bg-orange text-black px-8 py-4 rounded-full font-black hover:bg-white transition-colors">
+            View Our Services
+          </a>
+          <button data-open-contact class="border-2 border-orange text-orange px-8 py-4 rounded-full font-black hover:bg-orange hover:text-black transition-colors">
+            Get Free Quote
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lawrenceville Local Content -->
+    <section class="py-16 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center">
+          Why Lawrenceville Businesses Choose Self Labs
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white/5 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-orange">🌍 International Community</h3>
+            <p class="text-gray-300">
+              We understand Lawrenceville's diverse international community and create websites that serve multicultural businesses.
+            </p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-orange">🏛️ Gwinnett County Seat</h3>
+            <p class="text-gray-300">
+              Supporting Lawrenceville's role as Gwinnett County's government and business center with professional web solutions.
+            </p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-orange">💼 Professional Services Hub</h3>
+            <p class="text-gray-300">
+              Helping Lawrenceville's thriving professional services sector grow their online presence and client base.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lawrenceville Service Areas -->
+    <section class="py-16 px-4 bg-white/5">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center">
+          Serving All of Lawrenceville & Gwinnett County
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-orange">Lawrenceville Core Areas</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Downtown Lawrenceville</li>
+              <li>• Historic Courthouse Square</li>
+              <li>• Gwinnett County Government</li>
+              <li>• Gwinnett Medical District</li>
+              <li>• Gwinnett Tech Area</li>
+              <li>• Residential Communities</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-orange">Gwinnett County Communities</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Duluth</li>
+              <li>• Norcross</li>
+              <li>• Lilburn</li>
+              <li>• Suwanee</li>
+              <li>• Buford</li>
+              <li>• Snellville</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lawrenceville Industries -->
+    <section class="py-16 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center">
+          Industries We Serve in Lawrenceville
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="text-center p-6 bg-white/5 rounded-lg">
+            <div class="text-4xl mb-4">🏛️</div>
+            <h3 class="text-lg font-bold mb-2">Government</h3>
+            <p class="text-sm text-gray-400">County services, municipal departments, contractors</p>
+          </div>
+          <div class="text-center p-6 bg-white/5 rounded-lg">
+            <div class="text-4xl mb-4">💼</div>
+            <h3 class="text-lg font-bold mb-2">Professional Services</h3>
+            <p class="text-sm text-gray-400">Law firms, accounting, consulting, real estate</p>
+          </div>
+          <div class="text-center p-6 bg-white/5 rounded-lg">
+            <div class="text-4xl mb-4">🏥</div>
+            <h3 class="text-lg font-bold mb-2">Healthcare</h3>
+            <p class="text-sm text-gray-400">Medical practices, dental offices, therapy services</p>
+          </div>
+          <div class="text-center p-6 bg-white/5 rounded-lg">
+            <div class="text-4xl mb-4">🌐</div>
+            <h3 class="text-lg font-bold mb-2">International Business</h3>
+            <p class="text-sm text-gray-400">Import/export, international services, multicultural businesses</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lawrenceville Diversity Focus -->
+    <section class="py-16 px-4 bg-white/5">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center">
+          Celebrating Lawrenceville's Diversity
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-orange">Multicultural Business Support</h3>
+            <p class="text-gray-300 mb-4">
+              We're proud to support Lawrenceville's diverse business community with multilingual and culturally sensitive web solutions.
+            </p>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Multilingual website support</li>
+              <li>• Cultural design considerations</li>
+              <li>• International business optimization</li>
+              <li>• Diverse community partnerships</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-orange">Gwinnett County Growth</h3>
+            <p class="text-gray-300 mb-4">
+              Helping Lawrenceville businesses capitalize on Gwinnett County's rapid growth and diverse economic opportunities.
+            </p>
+            <ul class="space-y-2 text-gray-300">
+              <li>• County-wide business reach</li>
+              <li>• Government contractor support</li>
+              <li>• Professional services growth</li>
+              <li>• Economic development partnerships</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-black mb-6">
+          Ready to Grow Your Lawrenceville Business Online?
+        </h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Join the growing number of Lawrenceville businesses that trust Self Labs for their web design needs. 
+          From government contractors to international businesses, we help you reach your target market.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button data-open-contact class="bg-orange text-black px-8 py-4 rounded-full font-black hover:bg-white transition-colors">
+            Get Your Free Quote
+          </button>
+          <a href="tel:+1-943-234-9570" class="border-2 border-orange text-orange px-8 py-4 rounded-full font-black hover:bg-orange hover:text-black transition-colors">
+            Call (943) 234-9570
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,124 @@
+---
+// Local Business Schema Markup for Monroe, GA
+const businessName = "Self Labs Web Design";
+const businessAddress = "1380 vinies drive, Monroe, GA 30655"; //actual address
+const businessPhone = "(943) 234-9570";
+const businessWebsite = "https://self-labs.io";
+const businessEmail = "info@self-labs.io";
+const businessDescription = "Local web design and SEO services for Monroe, GA businesses. Helping Walton County companies get found online and attract more customers.";
+const businessHours = [
+  { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "09:00", "closes": "18:00" },
+  { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "09:00", "closes": "18:00" },
+  { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "09:00", "closes": "18:00" },
+  { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "09:00", "closes": "18:00" },
+  { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "18:00" }
+];
+const businessServices = [
+  "Web Design",
+  "SEO Services", 
+  "Digital Marketing",
+  "Website Development",
+  "Local SEO",
+  "E-commerce Development"
+];
+const businessAreasServed = [
+  "Monroe, GA",
+  "Social Circle, GA", 
+  "Winder, GA",
+  "Athens, GA",
+  "Loganville, GA",
+  "Covington, GA",
+  "Lawrenceville, GA",
+  "Walton County, GA",
+  "Barrow County, GA"
+];
+const businessGeo = {
+  "@type": "GeoCoordinates",
+  "latitude": "33.7948",
+  "longitude": "-83.7132"
+};
+const businessAddressObj = {
+  "@type": "PostalAddress",
+  "streetAddress": "1380 Vinies Drive",
+  "addressLocality": "Monroe",
+  "addressRegion": "GA",
+  "postalCode": "30655",
+  "addressCountry": "US"
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": businessName,
+  "description": businessDescription,
+  "url": businessWebsite,
+  "telephone": businessPhone,
+  "email": businessEmail,
+  "address": businessAddressObj,
+  "geo": businessGeo,
+  "openingHoursSpecification": businessHours,
+  "serviceArea": businessAreasServed.map(area => ({
+    "@type": "GeoCircle",
+    "geoMidpoint": businessGeo,
+    "geoRadius": "25 miles"
+  })),
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Web Design Services",
+    "itemListElement": businessServices.map(service => ({
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": service,
+        "description": `${service} for Monroe, GA businesses`
+      }
+    }))
+  },
+  "sameAs": [
+    "https://www.facebook.com/selflabswebdesign",
+    "https://www.linkedin.com/company/self-labs-web-design",
+    "https://www.yelp.com/biz/self-labs-web-design-monroe"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "25"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Sarah M."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "Will helped us get our online ordering system working perfectly. Our takeout orders increased by 200% in just 3 months."
+    },
+    {
+      "@type": "Review", 
+      "author": {
+        "@type": "Person",
+        "name": "Mike R."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "Our website was invisible on Google before Will got involved. Now we're the first result when people search for 'lawyer Monroe GA'."
+    }
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Will Sargent",
+    "description": "Local web design and SEO expert serving Monroe, GA and surrounding areas for over 5 years."
+  },
+  "foundingDate": "2019",
+  "numberOfEmployees": "1-5",
+  "priceRange": "$$"
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)}></script>

@@ -1,0 +1,202 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const title = "SEO & Web Design Blog | Self Labs Web Design";
+const description = "Expert insights on SEO, web design, and digital marketing. Learn proven strategies to improve your website's performance and search rankings.";
+const canonical = "https://selflabs.dev/blog";
+---
+
+<BaseLayout 
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage="/blog/blog-index.jpg"
+  ogType="website"
+>
+  <main class="px-4 py-16 md:px-8 lg:px-12">
+    <div class="mx-auto max-w-6xl">
+      <!-- Blog Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          SEO & Web Design Blog
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Get the latest insights on SEO, web design, and digital marketing. Learn proven strategies that actually work from someone who's been in the trenches for over 5 years.
+        </p>
+        <div class="mt-6">
+          <a href="/rss.xml" class="inline-flex items-center space-x-2 text-orange-500 hover:text-orange-400 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3.429 2.571c-1.143 0-2.071.928-2.071 2.071s.928 2.071 2.071 2.071 2.071-.928 2.071-2.071-.928-2.071-2.071-2.071zm0 5.143c-1.143 0-2.071.928-2.071 2.071s.928 2.071 2.071 2.071 2.071-.928 2.071-2.071-.928-2.071-2.071-2.071zm0 5.143c-1.143 0-2.071.928-2.071 2.071s.928 2.071 2.071 2.071 2.071-.928 2.071-2.071-.928-2.071-2.071-2.071z"/>
+            </svg>
+            <span>Subscribe to RSS Feed</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Featured Post -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-8">Latest Post</h2>
+        <div class="bg-white/5 p-8 rounded-lg border border-white/10">
+          <div class="flex items-start space-x-6">
+            <div class="w-24 h-24 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">
+              SEO
+            </div>
+            <div class="flex-1">
+              <h3 class="text-2xl font-bold text-white mb-3">
+                <a href="/blog/seo-best-practices-2025" class="hover:text-orange-400 transition-colors">
+                  10 Essential SEO Best Practices for 2025
+                </a>
+              </h3>
+              <p class="text-gray-300 mb-4">
+                Look, I've been doing SEO for over 5 years now, and I've seen what actually works. These aren't just theories - these are the proven strategies that'll boost your rankings and drive real traffic to your site.
+              </p>
+              <div class="flex items-center space-x-4 text-sm text-gray-400">
+                <span>By Will Sargent</span>
+                <span>•</span>
+                <span>Dec 19, 2024</span>
+                <span>•</span>
+                <span>10 min read</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- All Blog Posts -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-8">All Posts</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Blog Post 1 -->
+          <article class="bg-white/5 p-6 rounded-lg border border-white/10 hover:border-orange-500/50 transition-colors">
+            <div class="w-16 h-16 bg-green-500 rounded-lg flex items-center justify-center text-white font-bold text-lg mb-4">
+              SEO
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              <a href="/blog/seo-best-practices-2025" class="hover:text-orange-400 transition-colors">
+                10 Essential SEO Best Practices for 2025
+              </a>
+            </h3>
+            <p class="text-gray-300 text-sm mb-4">
+              The proven strategies that'll boost your rankings and drive real traffic to your site. No fluff, just results.
+            </p>
+            <div class="flex items-center justify-between text-sm text-gray-400">
+              <span>Dec 19, 2024</span>
+              <span>10 min read</span>
+            </div>
+          </article>
+
+          <!-- Blog Post 2 -->
+          <article class="bg-white/5 p-6 rounded-lg border border-white/10 hover:border-orange-500/50 transition-colors">
+            <div class="w-16 h-16 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-lg mb-4">
+              CWV
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              <a href="/blog/core-web-vitals-guide" class="hover:text-orange-400 transition-colors">
+                Core Web Vitals: Complete Guide to Website Performance
+              </a>
+            </h3>
+            <p class="text-gray-300 text-sm mb-4">
+              Let me be straight with you - if your website's slow, you're losing customers. Here's how to fix them.
+            </p>
+            <div class="flex items-center justify-between text-sm text-gray-400">
+              <span>Dec 19, 2024</span>
+              <span>12 min read</span>
+            </div>
+          </article>
+
+          <!-- Blog Post 3 -->
+          <article class="bg-white/5 p-6 rounded-lg border border-white/10 hover:border-orange-500/50 transition-colors">
+            <div class="w-16 h-16 bg-purple-500 rounded-lg flex items-center justify-center text-white font-bold text-lg mb-4">
+              RWD
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              <a href="/blog/responsive-web-design-seo" class="hover:text-orange-400 transition-colors">
+                Responsive Web Design SEO: Mobile-First Optimization Guide
+              </a>
+            </h3>
+            <p class="text-gray-300 text-sm mb-4">
+              Here's a harsh truth: if your website doesn't work on mobile, you're basically invisible to Google.
+            </p>
+            <div class="flex items-center justify-between text-sm text-gray-400">
+              <span>Dec 19, 2024</span>
+              <span>15 min read</span>
+            </div>
+          </article>
+
+          <!-- Blog Post 4 -->
+          <article class="bg-white/5 p-6 rounded-lg border border-white/10 hover:border-orange-500/50 transition-colors">
+            <div class="w-16 h-16 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold text-lg mb-4">
+              SPD
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              <a href="/blog/website-speed-optimization" class="hover:text-orange-400 transition-colors">
+                Website Speed Optimization: 15 Techniques That Actually Work
+              </a>
+            </h3>
+            <p class="text-gray-300 text-sm mb-4">
+              Your website's slow, and it's killing your business. Every second of delay costs you customers and rankings.
+            </p>
+            <div class="flex items-center justify-between text-sm text-gray-400">
+              <span>Dec 19, 2024</span>
+              <span>18 min read</span>
+            </div>
+          </article>
+
+          <!-- Blog Post 5 -->
+          <article class="bg-white/5 p-6 rounded-lg border border-white/10 hover:border-orange-500/50 transition-colors">
+            <div class="w-16 h-16 bg-yellow-500 rounded-lg flex items-center justify-center text-white font-bold text-lg mb-4">
+              DES
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              <a href="/blog/seo-for-web-designers" class="hover:text-orange-400 transition-colors">
+                SEO for Web Designers: Technical Implementation Guide
+              </a>
+            </h3>
+            <p class="text-gray-300 text-sm mb-4">
+              Look, I get it - you're a designer, not an SEO expert. But here's the thing: if you're not thinking about SEO when you design...
+            </p>
+            <div class="flex items-center justify-between text-sm text-gray-400">
+              <span>Dec 19, 2024</span>
+              <span>14 min read</span>
+            </div>
+          </article>
+
+          <!-- Blog Post 6 -->
+          <article class="bg-white/5 p-6 rounded-lg border border-white/10 hover:border-orange-500/50 transition-colors">
+            <div class="w-16 h-16 bg-indigo-500 rounded-lg flex items-center justify-center text-white font-bold text-lg mb-4">
+              INT
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
+              <a href="/blog/website-design-seo-integration" class="hover:text-orange-400 transition-colors">
+                Website Design & SEO: Complete Integration Guide
+              </a>
+            </h3>
+            <p class="text-gray-300 text-sm mb-4">
+              Here's the secret most agencies don't want you to know: the best websites aren't just beautiful or just SEO-optimized...
+            </p>
+            <div class="flex items-center justify-between text-sm text-gray-400">
+              <span>Dec 19, 2024</span>
+              <span>20 min read</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="bg-orange-500/10 border border-orange-500/20 p-8 rounded-lg text-center">
+        <h2 class="text-2xl font-bold text-white mb-4">Ready to Stop Guessing and Start Ranking?</h2>
+        <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+          I've helped over 200 businesses get their websites ranking on page 1 of Google. Want to be next? Let's talk about how we can get your site performing better.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="bg-orange-500 text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition-colors">
+            Get Your Free SEO Audit
+          </a>
+          <a href="tel:+1-943-234-9570" class="border border-orange-500 text-orange-500 px-8 py-3 rounded-lg hover:bg-orange-500/10 transition-colors">
+            Call: (943) 234-9570
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

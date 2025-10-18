@@ -1,0 +1,228 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const seoProps = {
+  title: "Web Design Covington GA | Professional Website Design & Development | Self Labs",
+  description: "Professional web design services in Covington, GA. Custom websites for Covington businesses and Newton County. Fast, affordable, and reliable web development starting at $300.",
+  canonical: "/covington-ga-web-design",
+  ogType: "website",
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Self Labs Web Design",
+    "description": "Professional web design and development services in Covington, Georgia",
+    "url": "https://self-labs.io/covington-ga-web-design",
+    "logo": "https://self-labs.io/favicons/apple-touch-icon.png",
+    "email": "support@self-labs.io",
+    "priceRange": "$300-$2500+",
+    "serviceType": ["Website Design", "Website Development", "Website Maintenance", "SEO Services"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Covington",
+      "addressRegion": "GA",
+      "postalCode": "30014"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "33.5968",
+      "longitude": "-83.8602"
+    },
+    "areaServed": [
+      "Covington, GA",
+      "Monroe, GA",
+      "Oxford, GA",
+      "Newborn, GA",
+      "Porterdale, GA",
+      "Mansfield, GA"
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Covington Web Design Services",
+        "priceRange": "$300-$2500+",
+        "description": "Custom website design and development for Covington businesses"
+      },
+      {
+        "@type": "Offer",
+        "name": "Covington SEO Services",
+        "priceRange": "$200-$1000/month",
+        "description": "Local SEO optimization for Covington businesses"
+      }
+    ]
+  }
+};
+---
+
+<BaseLayout {...seoProps}>
+  <div class="bg-black text-white min-h-screen">
+    <!-- Covington Hero Section -->
+    <section class="relative bg-gradient-to-br from-orange/20 to-black py-20 px-4">
+      <div class="max-w-6xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-black mb-6">
+          Web Design Services in <span class="text-orange">Covington, GA</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-300">
+          Professional website design and development for Covington businesses and Newton County. 
+          Serving the historic county seat with modern, fast, and affordable web solutions.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#services" class="bg-orange text-black px-8 py-4 rounded-full font-black hover:bg-white transition-colors">
+            View Our Services
+          </a>
+          <button data-open-contact class="border-2 border-orange text-orange px-8 py-4 rounded-full font-black hover:bg-orange hover:text-black transition-colors">
+            Get Free Quote
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Covington Local Content -->
+    <section class="py-16 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center">
+          Why Covington Businesses Choose Self Labs
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white/5 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-orange">🏛️ Historic Business District</h3>
+            <p class="text-gray-300">
+              We understand the unique character of Covington's historic downtown and help businesses blend tradition with modern web technology.
+            </p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-orange">🏭 Industrial & Commercial Focus</h3>
+            <p class="text-gray-300">
+              Supporting Covington's diverse business community from manufacturing to healthcare with tailored web solutions.
+            </p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-orange">🌱 Newton County Growth</h3>
+            <p class="text-gray-300">
+              Helping Covington businesses capitalize on Newton County's economic development and growth opportunities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Covington Service Areas -->
+    <section class="py-16 px-4 bg-white/5">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center">
+          Serving All of Covington & Newton County
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-orange">Covington Core Areas</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Downtown Covington</li>
+              <li>• Historic Square</li>
+              <li>• Covington Mills Area</li>
+              <li>• Industrial District</li>
+              <li>• Residential Areas</li>
+              <li>• Medical District</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-orange">Newton County Communities</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Oxford</li>
+              <li>• Newborn</li>
+              <li>• Porterdale</li>
+              <li>• Mansfield</li>
+              <li>• Almon</li>
+              <li>• Starrsville</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Covington Industries -->
+    <section class="py-16 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center">
+          Industries We Serve in Covington
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="text-center p-6 bg-white/5 rounded-lg">
+            <div class="text-4xl mb-4">🏭</div>
+            <h3 class="text-lg font-bold mb-2">Manufacturing</h3>
+            <p class="text-sm text-gray-400">Industrial companies, manufacturers, suppliers</p>
+          </div>
+          <div class="text-center p-6 bg-white/5 rounded-lg">
+            <div class="text-4xl mb-4">🏥</div>
+            <h3 class="text-lg font-bold mb-2">Healthcare</h3>
+            <p class="text-sm text-gray-400">Medical practices, dental offices, therapy services</p>
+          </div>
+          <div class="text-center p-6 bg-white/5 rounded-lg">
+            <div class="text-4xl mb-4">🏛️</div>
+            <h3 class="text-lg font-bold mb-2">Government</h3>
+            <p class="text-sm text-gray-400">County services, municipal departments, contractors</p>
+          </div>
+          <div class="text-center p-6 bg-white/5 rounded-lg">
+            <div class="text-4xl mb-4">🛒</div>
+            <h3 class="text-lg font-bold mb-2">Retail & Services</h3>
+            <p class="text-sm text-gray-400">Local shops, restaurants, professional services</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Covington Economic Development -->
+    <section class="py-16 px-4 bg-white/5">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center">
+          Supporting Covington's Economic Development
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-orange">Business Growth Support</h3>
+            <p class="text-gray-300 mb-4">
+              We're committed to supporting Covington's economic development through professional web services for local businesses.
+            </p>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Newton County Chamber of Commerce</li>
+              <li>• Downtown Development Authority</li>
+              <li>• Local business networking</li>
+              <li>• Economic development partnerships</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-orange">Professional Services</h3>
+            <p class="text-gray-300 mb-4">
+              From law firms to accounting practices, we help Covington's professional services grow their online presence.
+            </p>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Legal practice websites</li>
+              <li>• Accounting firm sites</li>
+              <li>• Consulting business sites</li>
+              <li>• Professional service optimization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-black mb-6">
+          Ready to Grow Your Covington Business Online?
+        </h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Join the growing number of Covington businesses that trust Self Labs for their web design needs. 
+          From manufacturing to healthcare, we help you reach your target market.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button data-open-contact class="bg-orange text-black px-8 py-4 rounded-full font-black hover:bg-white transition-colors">
+            Get Your Free Quote
+          </button>
+          <a href="tel:+1-943-234-9570" class="border-2 border-orange text-orange px-8 py-4 rounded-full font-black hover:bg-orange hover:text-black transition-colors">
+            Call (943) 234-9570
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

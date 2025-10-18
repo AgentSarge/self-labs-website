@@ -1,0 +1,242 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Picture } from "astro:assets";
+import LocalSchema from "@/components/LocalSchema.astro";
+
+const title = "Web Design Monroe GA | Self Labs Web Design";
+const description = "Looking for web design in Monroe, GA? I'm Will Sargent, and I've been helping Monroe businesses get found online for over 5 years. Get your free website audit today.";
+const canonical = "https://self-labs.io/monroe-web-design";
+const publishDate = "2024-12-19";
+const author = "Will Sargent";
+---
+
+<BaseLayout 
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage="/monroe-web-design.jpg"
+  ogType="website"
+>
+  <main class="px-4 py-16 md:px-8 lg:px-12">
+    <div class="mx-auto max-w-6xl">
+      <!-- Hero Section -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Web Design Monroe, GA That Actually Works
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          Hey there, Monroe! I'm Will Sargent, and I've been helping local businesses like yours get found online for over 5 years. No fancy jargon, no BS - just websites that actually bring in customers.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="bg-orange-500 text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition-colors">
+            Get Your Free Website Audit
+          </a>
+          <a href="tel:+1-943-234-9570" class="border border-orange-500 text-orange-500 px-8 py-3 rounded-lg hover:bg-orange-500/10 transition-colors">
+            Call: (943) 234-9570
+          </a>
+        </div>
+      </div>
+
+      <!-- Why Choose Local Web Design -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">Why Monroe Businesses Choose Local Web Design</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">🏠 Local Understanding</h3>
+            <p class="text-gray-300">
+              I know Monroe. I understand our local market, our businesses, and what makes our community special. That local knowledge shows up in every website I build.
+            </p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">🤝 Personal Service</h3>
+            <p class="text-gray-300">
+              When you work with me, you're not just another number. I'm your neighbor, and I care about your success. You'll have my direct phone number, not a call center.
+            </p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">💰 Better Value</h3>
+            <p class="text-gray-300">
+              No big agency overhead means better prices for you. Plus, I understand what Monroe businesses actually need - no unnecessary bells and whistles.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Monroe Business Success Stories -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">Monroe Businesses I've Helped</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">Monroe Downtown Restaurant</h3>
+            <p class="text-gray-300 mb-4">
+              "Will helped us get our online ordering system working perfectly. Our takeout orders increased by 200% in just 3 months. He really understands what Monroe customers want."
+            </p>
+            <p class="text-orange-500 font-semibold">- Sarah M., Downtown Monroe</p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">Walton County Law Firm</h3>
+            <p class="text-gray-300 mb-4">
+              "Our website was invisible on Google before Will got involved. Now we're the first result when people search for 'lawyer Monroe GA'. Game changer."
+            </p>
+            <p class="text-orange-500 font-semibold">- Mike R., Walton County</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Local SEO for Monroe -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">How I Help Monroe Businesses Get Found Online</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-semibold text-white mb-4">Local SEO That Actually Works</h3>
+            <p class="text-gray-300 mb-6">
+              Here's the thing about SEO in Monroe - it's not just about keywords. It's about understanding how people in our community actually search for businesses. I know the local search patterns, the neighborhood names, and the way Monroe residents talk about services.
+            </p>
+            <ul class="space-y-3 text-gray-300">
+              <li>• <strong>Google My Business optimization</strong> - Get found in "near me" searches</li>
+              <li>• <strong>Local keyword targeting</strong> - "web design Monroe GA" and variations</li>
+              <li>• <strong>Walton County citations</strong> - Listed in all the right local directories</li>
+              <li>• <strong>Local content marketing</strong> - Blog about Monroe businesses and events</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold text-white mb-4">Mobile-First Design</h3>
+            <p class="text-gray-300 mb-6">
+              Most people in Monroe are searching on their phones. I make sure your website looks amazing and loads fast on mobile devices. No more frustrated customers trying to navigate a desktop-only site on their phone.
+            </p>
+            <ul class="space-y-3 text-gray-300">
+              <li>• <strong>Mobile-optimized design</strong> - Perfect on all devices</li>
+              <li>• <strong>Fast loading speeds</strong> - No more waiting for slow sites</li>
+              <li>• <strong>Easy navigation</strong> - Customers find what they need quickly</li>
+              <li>• <strong>Local business features</strong> - Hours, location, contact info front and center</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Monroe-Specific Services -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">Web Design Services for Monroe Businesses</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">Small Business Websites</h3>
+            <p class="text-gray-300 mb-4">
+              Perfect for Monroe restaurants, shops, and service businesses. Clean, professional, and designed to convert visitors into customers.
+            </p>
+            <ul class="text-sm text-gray-300 space-y-2">
+              <li>• Mobile-responsive design</li>
+              <li>• Local SEO optimization</li>
+              <li>• Contact forms and maps</li>
+              <li>• Social media integration</li>
+            </ul>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">E-commerce Solutions</h3>
+            <p class="text-gray-300 mb-4">
+              For Monroe businesses ready to sell online. Secure, fast, and easy to manage - even if you're not tech-savvy.
+            </p>
+            <ul class="text-sm text-gray-300 space-y-2">
+              <li>• Online store setup</li>
+              <li>• Payment processing</li>
+              <li>• Inventory management</li>
+              <li>• Order tracking</li>
+            </ul>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">SEO & Marketing</h3>
+            <p class="text-gray-300 mb-4">
+              Get found by Monroe customers searching for your services. Local SEO that actually drives traffic and leads.
+            </p>
+            <ul class="text-sm text-gray-300 space-y-2">
+              <li>• Local search optimization</li>
+              <li>• Google My Business setup</li>
+              <li>• Review management</li>
+              <li>• Local content creation</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Monroe Community Involvement -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">Proud to Support Monroe</h2>
+        <div class="bg-white/5 p-8 rounded-lg border border-white/10">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 class="text-2xl font-semibold text-white mb-4">More Than Just Web Design</h3>
+              <p class="text-gray-300 mb-6">
+                I'm not just your web designer - I'm your neighbor. I volunteer with the Monroe Downtown Development Authority, sponsor local events, and believe in supporting our community. When you work with me, you're supporting a local business that gives back to Monroe.
+              </p>
+              <ul class="space-y-2 text-gray-300">
+                <li>• Monroe Chamber of Commerce member</li>
+                <li>• Downtown Monroe supporter</li>
+                <li>• Local business advocate</li>
+                <li>• Community volunteer</li>
+              </ul>
+            </div>
+            <div class="text-center">
+              <div class="bg-orange-500/10 border border-orange-500/20 p-6 rounded-lg">
+                <h4 class="text-xl font-semibold text-white mb-4">Ready to Get Started?</h4>
+                <p class="text-gray-300 mb-6">
+                  Let's talk about your Monroe business and how I can help you get found online. No pressure, just honest advice about what your business needs.
+                </p>
+                <a href="/contact" class="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors inline-block">
+                  Schedule Your Free Consultation
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-6">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-3">How long does it take to build a website?</h3>
+            <p class="text-gray-300">
+              Most Monroe businesses see their new website live within 2-4 weeks. I work fast, but I don't rush quality. Your website needs to represent your business well, and that takes the right amount of time.
+            </p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-3">Do you work with small businesses?</h3>
+            <p class="text-gray-300">
+              Absolutely! I specialize in helping Monroe's small businesses compete online. Whether you're a family restaurant, local shop, or service business, I understand your needs and budget.
+            </p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-3">What if I need help after the website is done?</h3>
+            <p class="text-gray-300">
+              I'm here for the long haul. I provide ongoing support, updates, and maintenance. Plus, I'm local - you can call me directly if you need help. No waiting on hold with a call center.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="mb-16">
+        <div class="bg-orange-500/10 border border-orange-500/20 p-8 rounded-lg text-center">
+          <h2 class="text-2xl font-bold text-white mb-4">Ready to Get Your Monroe Business Online?</h2>
+          <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+            Look, I get it - you're busy running your business. You don't have time to figure out websites and SEO. That's where I come in. Let me handle the technical stuff so you can focus on what you do best.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" class="bg-orange-500 text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition-colors">
+              Get Your Free Website Audit
+            </a>
+            <a href="tel:+1-943-234-9570" class="border border-orange-500 text-orange-500 px-8 py-3 rounded-lg hover:bg-orange-500/10 transition-colors">
+              Call: (943) 234-9570
+            </a>
+          </div>
+          <p class="text-sm text-gray-400 mt-4">
+            <strong>Local Monroe Business:</strong> I'm here when you need me, not some call center in another state.
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <!-- Local Schema Markup -->
+  <LocalSchema />
+</BaseLayout>

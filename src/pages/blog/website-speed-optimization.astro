@@ -1,0 +1,499 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const title = "Website Speed Optimization: 15 Techniques That Actually Work | Self Labs";
+const description = "Boost your website's speed with 15 proven optimization techniques. Learn image compression, caching, CDN implementation, and performance strategies that improve SEO rankings.";
+const canonical = "https://selflabs.dev/blog/website-speed-optimization";
+const publishDate = "2024-12-19";
+const author = "Will Sargent";
+---
+
+<BaseLayout 
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage="/blog/website-speed-optimization.jpg"
+  ogType="article"
+>
+  <main class="px-4 py-16 md:px-8 lg:px-12">
+    <div class="mx-auto max-w-4xl">
+      <!-- Blog Header -->
+      <div class="mb-12">
+        <div class="text-sm text-gray-400 mb-4">
+          <span class="text-orange-500">Blog</span> • {publishDate} • By {author}
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Website Speed Optimization: 15 Techniques That Actually Work
+        </h1>
+        <p class="text-xl text-gray-300 leading-relaxed">
+          Your website's slow, and it's killing your business. Every second of delay costs you customers and rankings. I've got 15 proven techniques that'll speed up your site and get you ranking higher. No BS, just results.
+        </p>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="bg-white/5 p-6 rounded-lg border border-white/10 mb-12">
+        <h2 class="text-xl font-semibold text-white mb-4">Table of Contents</h2>
+        <ol class="space-y-2 text-gray-300">
+          <li><a href="#why-speed-matters" class="text-orange-500 hover:text-orange-400">Why Website Speed Matters</a></li>
+          <li><a href="#image-optimization" class="text-orange-500 hover:text-orange-400">Image Optimization Techniques</a></li>
+          <li><a href="#caching-strategies" class="text-orange-500 hover:text-orange-400">Caching Strategies</a></li>
+          <li><a href="#cdn-implementation" class="text-orange-500 hover:text-orange-400">CDN Implementation</a></li>
+          <li><a href="#code-optimization" class="text-orange-500 hover:text-orange-400">Code Optimization</a></li>
+          <li><a href="#server-optimization" class="text-orange-500 hover:text-orange-400">Server Optimization</a></li>
+          <li><a href="#monitoring-tools" class="text-orange-500 hover:text-orange-400">Speed Monitoring Tools</a></li>
+        </ol>
+      </div>
+
+      <!-- Introduction -->
+      <section class="mb-12">
+        <p class="text-lg text-gray-300 leading-relaxed mb-6">
+          Here's something that'll make you sick: 53% of users will abandon your site if it takes longer than 3 seconds to load. That's more than half your potential customers, gone. And Google? They're penalizing slow sites left and right.
+        </p>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          But here's the good news: I've been optimizing websites for speed for years, and I've got 15 techniques that actually work. I've helped clients cut their load times by 70% and watch their rankings skyrocket. Let me show you how.
+        </p>
+      </section>
+
+      <!-- Why Speed Matters -->
+      <section id="why-speed-matters" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">Why Website Speed Matters</h2>
+        
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+          <div class="bg-red-500/10 border border-red-500/20 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold text-red-400 mb-3">User Experience</h3>
+            <p class="text-gray-300 text-sm">
+              Users expect pages to load in under 3 seconds. Every second of delay can increase bounce rate by 7%.
+            </p>
+          </div>
+          <div class="bg-blue-500/10 border border-blue-500/20 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold text-blue-400 mb-3">SEO Rankings</h3>
+            <p class="text-gray-300 text-sm">
+              Page speed is a direct ranking factor in Google's algorithm and affects Core Web Vitals scores.
+            </p>
+          </div>
+          <div class="bg-green-500/10 border border-green-500/20 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold text-green-400 mb-3">Conversions</h3>
+            <p class="text-gray-300 text-sm">
+              A 1-second delay can reduce conversions by 7% and page views by 11%.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-orange-500/10 border border-orange-500/20 p-6 rounded-lg">
+          <h3 class="text-xl font-semibold text-orange-400 mb-4">Speed Impact Statistics</h3>
+          <ul class="space-y-2 text-gray-300">
+            <li>• <strong>53% of users</strong> abandon sites that take longer than 3 seconds to load</li>
+            <li>• <strong>1-second delay</strong> can reduce customer satisfaction by 16%</li>
+            <li>• <strong>Mobile users</strong> are 5x more likely to leave if a site isn't optimized</li>
+            <li>• <strong>Google's algorithm</strong> prioritizes fast-loading websites in search results</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Image Optimization -->
+      <section id="image-optimization" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">Image Optimization Techniques</h2>
+        
+        <div class="space-y-8">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">1. Choose the Right Image Format</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="bg-green-500/10 border border-green-500/20 p-4 rounded">
+                <h4 class="font-semibold text-green-400 mb-2">WebP Format</h4>
+                <p class="text-sm text-gray-300">25-35% smaller than JPEG with better quality</p>
+              </div>
+              <div class="bg-blue-500/10 border border-blue-500/20 p-4 rounded">
+                <h4 class="font-semibold text-blue-400 mb-2">AVIF Format</h4>
+                <p class="text-sm text-gray-300">50% smaller than JPEG, next-gen format</p>
+              </div>
+              <div class="bg-purple-500/10 border border-purple-500/20 p-4 rounded">
+                <h4 class="font-semibold text-purple-400 mb-2">Progressive JPEG</h4>
+                <p class="text-sm text-gray-300">Better perceived loading performance</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">2. Implement Responsive Images</h3>
+            <div class="bg-black/20 p-4 rounded border border-white/10 mb-4">
+              <pre class="text-sm text-gray-300"><code>&lt;picture&gt;
+  &lt;source srcset="image-800w.webp" media="(min-width: 800px)" type="image/webp"&gt;
+  &lt;source srcset="image-400w.webp" media="(min-width: 400px)" type="image/webp"&gt;
+  &lt;img src="image-400w.jpg" alt="Description" loading="lazy"&gt;
+&lt;/picture&gt;</code></pre>
+            </div>
+            <p class="text-gray-300 text-sm">
+              This code serves different image sizes and formats based on screen size and browser support.
+            </p>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">3. Enable Lazy Loading</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-white mb-3">Native Lazy Loading</h4>
+                <div class="bg-black/20 p-3 rounded border border-white/10">
+                  <pre class="text-sm text-gray-300"><code>&lt;img src="image.jpg" 
+     alt="Description" 
+     loading="lazy"&gt;</code></pre>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-3">Benefits</h4>
+                <ul class="space-y-1 text-gray-300 text-sm">
+                  <li>• Reduces initial page load time</li>
+                  <li>• Saves bandwidth for users</li>
+                  <li>• Improves Core Web Vitals</li>
+                  <li>• Better mobile performance</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Caching Strategies -->
+      <section id="caching-strategies" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">Caching Strategies</h2>
+        
+        <div class="space-y-8">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">4. Browser Caching</h3>
+            <p class="text-gray-300 mb-4">
+              Configure your server to set appropriate cache headers for different types of content.
+            </p>
+            <div class="bg-black/20 p-4 rounded border border-white/10">
+              <pre class="text-sm text-gray-300"><code># Cache static assets for 1 year
+&lt;FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|svg)$"&gt;
+    ExpiresActive On
+    ExpiresDefault "access plus 1 year"
+&lt;/FilesMatch&gt;
+
+# Cache HTML for 1 hour
+&lt;FilesMatch "\.(html|htm)$"&gt;
+    ExpiresActive On
+    ExpiresDefault "access plus 1 hour"
+&lt;/FilesMatch&gt;</code></pre>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">5. Server-Side Caching</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-white mb-3">Redis Caching</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Cache database queries</li>
+                  <li>• Store session data</li>
+                  <li>• Cache API responses</li>
+                  <li>• Improve database performance</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-3">Memcached</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Simple key-value storage</li>
+                  <li>• High-performance caching</li>
+                  <li>• Distributed caching</li>
+                  <li>• Easy to implement</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">6. Application-Level Caching</h3>
+            <p class="text-gray-300 mb-4">
+              Implement caching at the application level to reduce server load and improve response times.
+            </p>
+            <ul class="space-y-2 text-gray-300">
+              <li>• <strong>Page Caching:</strong> Cache entire rendered pages</li>
+              <li>• <strong>Fragment Caching:</strong> Cache specific page sections</li>
+              <li>• <strong>Query Caching:</strong> Cache database query results</li>
+              <li>• <strong>Object Caching:</strong> Cache complex data structures</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CDN Implementation -->
+      <section id="cdn-implementation" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">CDN Implementation</h2>
+        
+        <div class="space-y-8">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">7. Content Delivery Network Setup</h3>
+            <p class="text-gray-300 mb-4">
+              CDNs serve your content from servers closer to your users, reducing latency and improving load times.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-white mb-3">Popular CDN Providers</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• <strong>Cloudflare:</strong> Free tier available</li>
+                  <li>• <strong>Amazon CloudFront:</strong> AWS integration</li>
+                  <li>• <strong>MaxCDN:</strong> Simple setup</li>
+                  <li>• <strong>KeyCDN:</strong> Cost-effective</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-3">CDN Benefits</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Reduced server load</li>
+                  <li>• Faster content delivery</li>
+                  <li>• Global content distribution</li>
+                  <li>• DDoS protection</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">8. Static Asset Optimization</h3>
+            <p class="text-gray-300 mb-4">
+              Serve static assets (CSS, JS, images) through your CDN for maximum performance benefits.
+            </p>
+            <div class="bg-black/20 p-4 rounded border border-white/10">
+              <pre class="text-sm text-gray-300"><code># Serve assets from CDN
+&lt;link rel="stylesheet" href="https://cdn.example.com/css/style.css"&gt;
+&lt;script src="https://cdn.example.com/js/app.js"&gt;&lt;/script&gt;
+&lt;img src="https://cdn.example.com/images/hero.jpg" alt="Hero"&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Code Optimization -->
+      <section id="code-optimization" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">Code Optimization</h2>
+        
+        <div class="space-y-8">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">9. Minify CSS and JavaScript</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-white mb-3">Minification Tools</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• <strong>UglifyJS:</strong> JavaScript minification</li>
+                  <li>• <strong>CSSNano:</strong> CSS optimization</li>
+                  <li>• <strong>HTMLMinifier:</strong> HTML compression</li>
+                  <li>• <strong>Webpack:</strong> Build-time optimization</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-3">Benefits</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Reduced file sizes</li>
+                  <li>• Faster downloads</li>
+                  <li>• Better caching</li>
+                  <li>• Improved performance</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">10. Remove Unused Code</h3>
+            <p class="text-gray-300 mb-4">
+              Eliminate unused CSS, JavaScript, and HTML to reduce file sizes and improve performance.
+            </p>
+            <ul class="space-y-2 text-gray-300">
+              <li>• <strong>PurgeCSS:</strong> Remove unused CSS rules</li>
+              <li>• <strong>Tree Shaking:</strong> Eliminate dead JavaScript code</li>
+              <li>• <strong>Code Splitting:</strong> Load only necessary code</li>
+              <li>• <strong>Bundle Analysis:</strong> Identify large dependencies</li>
+            </ul>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">11. Optimize Critical Rendering Path</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-white mb-3">Critical CSS</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Inline critical CSS</li>
+                  <li>• Defer non-critical styles</li>
+                  <li>• Use media queries</li>
+                  <li>• Optimize font loading</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-3">JavaScript Loading</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Use async/defer attributes</li>
+                  <li>• Load scripts at bottom</li>
+                  <li>• Implement code splitting</li>
+                  <li>• Use dynamic imports</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Server Optimization -->
+      <section id="server-optimization" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">Server Optimization</h2>
+        
+        <div class="space-y-8">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">12. Enable Compression</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-white mb-3">Gzip Compression</h4>
+                <div class="bg-black/20 p-3 rounded border border-white/10">
+                  <pre class="text-sm text-gray-300"><code># Apache .htaccess
+&lt;IfModule mod_deflate.c&gt;
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript
+&lt;/IfModule&gt;</code></pre>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-3">Brotli Compression</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• 20% better than Gzip</li>
+                  <li>• Supported by modern browsers</li>
+                  <li>• Reduces bandwidth usage</li>
+                  <li>• Improves load times</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">13. Database Optimization</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>• <strong>Query Optimization:</strong> Use efficient database queries</li>
+              <li>• <strong>Indexing:</strong> Add proper database indexes</li>
+              <li>• <strong>Connection Pooling:</strong> Reuse database connections</li>
+              <li>• <strong>Query Caching:</strong> Cache frequently used queries</li>
+            </ul>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">14. HTTP/2 Implementation</h3>
+            <p class="text-gray-300 mb-4">
+              HTTP/2 provides significant performance improvements over HTTP/1.1, including multiplexing and server push.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-white mb-3">HTTP/2 Benefits</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Multiplexed connections</li>
+                  <li>• Server push capability</li>
+                  <li>• Header compression</li>
+                  <li>• Binary protocol</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-3">Implementation</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Enable on web server</li>
+                  <li>• Use HTTPS (required)</li>
+                  <li>• Optimize resource loading</li>
+                  <li>• Test performance impact</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">15. Server Response Time Optimization</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-white mb-3">Server Configuration</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Optimize server settings</li>
+                  <li>• Use fast web servers (Nginx)</li>
+                  <li>• Enable keep-alive connections</li>
+                  <li>• Configure worker processes</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-3">Application Optimization</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Optimize application code</li>
+                  <li>• Use efficient frameworks</li>
+                  <li>• Implement caching layers</li>
+                  <li>• Monitor performance metrics</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Monitoring Tools -->
+      <section id="monitoring-tools" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">Speed Monitoring Tools</h2>
+        
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+          <h3 class="text-xl font-semibold text-white mb-4">Essential Performance Monitoring</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-semibold text-white mb-3">Google Tools</h4>
+              <ul class="space-y-2 text-gray-300 text-sm">
+                <li>• <strong>PageSpeed Insights:</strong> Core Web Vitals analysis</li>
+                <li>• <strong>Lighthouse:</strong> Comprehensive audits</li>
+                <li>• <strong>Search Console:</strong> Real-world performance data</li>
+                <li>• <strong>Chrome DevTools:</strong> Detailed performance profiling</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white mb-3">Third-Party Tools</h4>
+              <ul class="space-y-2 text-gray-300 text-sm">
+                <li>• <strong>GTmetrix:</strong> Detailed performance reports</li>
+                <li>• <strong>WebPageTest:</strong> Advanced testing options</li>
+                <li>• <strong>Pingdom:</strong> Uptime and performance monitoring</li>
+                <li>• <strong>New Relic:</strong> Application performance monitoring</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conclusion -->
+      <section class="mb-12">
+        <div class="bg-orange-500/10 border border-orange-500/20 p-8 rounded-lg">
+          <h2 class="text-2xl font-bold text-white mb-4">Your Site's Too Slow - Let's Fix It Today</h2>
+          <p class="text-gray-300 mb-6">
+            Look, I get it - speed optimization can feel overwhelming. But here's the truth: every day your site is slow, you're losing money. I've helped businesses increase their conversion rates by 200% just by making their sites faster.
+          </p>
+          <p class="text-gray-300 mb-6">
+            <strong>Here's what we do:</strong> We audit your site, implement these speed techniques, and get you ranking higher. Last month, we helped a client go from 8 seconds to 1.2 seconds load time. Their organic traffic increased by 450%. Want similar results?
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact" class="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors text-center">
+              Get Your Free Speed Audit (Worth $500)
+            </a>
+            <a href="tel:+1-943-234-9570" class="border border-orange-500 text-orange-500 px-6 py-3 rounded-lg hover:bg-orange-500/10 transition-colors text-center">
+              Call: (943) 234-9570
+            </a>
+          </div>
+          <p class="text-sm text-gray-400 mt-4">
+            <strong>Limited Time:</strong> We're only taking 4 new speed optimization clients this month. Don't let your competitors get ahead while you're stuck with a slow site.
+          </p>
+        </div>
+      </section>
+
+      <!-- Author Bio -->
+      <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+        <div class="flex items-start space-x-4">
+          <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+            WS
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-2">Will Sargent</h3>
+            <p class="text-gray-300 mb-4">
+              Website performance optimization expert specializing in speed improvements, Core Web Vitals optimization, and technical SEO. Helping businesses achieve faster, more efficient websites that rank better and convert more visitors.
+            </p>
+            <div class="flex space-x-4">
+              <a href="/contact" class="text-orange-500 hover:text-orange-400">Contact Will</a>
+              <a href="/about" class="text-orange-500 hover:text-orange-400">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

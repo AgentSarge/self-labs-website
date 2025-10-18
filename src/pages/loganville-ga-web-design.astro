@@ -1,0 +1,227 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const seoProps = {
+  title: "Web Design Loganville GA | Professional Website Design & Development | Self Labs",
+  description: "Professional web design services in Loganville, GA. Custom websites for Loganville businesses and families. Fast, affordable, and reliable web development starting at $300.",
+  canonical: "/loganville-ga-web-design",
+  ogType: "website",
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Self Labs Web Design",
+    "description": "Professional web design and development services in Loganville, Georgia",
+    "url": "https://self-labs.io/loganville-ga-web-design",
+    "logo": "https://self-labs.io/favicons/apple-touch-icon.png",
+    "email": "support@self-labs.io",
+    "priceRange": "$300-$2500+",
+    "serviceType": ["Website Design", "Website Development", "Website Maintenance", "SEO Services"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Loganville",
+      "addressRegion": "GA",
+      "postalCode": "30052"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "33.8390",
+      "longitude": "-83.9007"
+    },
+    "areaServed": [
+      "Loganville, GA",
+      "Monroe, GA",
+      "Snellville, GA",
+      "Grayson, GA",
+      "Walnut Grove, GA"
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Loganville Web Design Services",
+        "priceRange": "$300-$2500+",
+        "description": "Custom website design and development for Loganville businesses"
+      },
+      {
+        "@type": "Offer",
+        "name": "Loganville SEO Services",
+        "priceRange": "$200-$1000/month",
+        "description": "Local SEO optimization for Loganville businesses"
+      }
+    ]
+  }
+};
+---
+
+<BaseLayout {...seoProps}>
+  <div class="bg-black text-white min-h-screen">
+    <!-- Loganville Hero Section -->
+    <section class="relative bg-gradient-to-br from-orange/20 to-black py-20 px-4">
+      <div class="max-w-6xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-black mb-6">
+          Web Design Services in <span class="text-orange">Loganville, GA</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-300">
+          Professional website design and development for Loganville businesses and families. 
+          Serving Gwinnett County with modern, fast, and affordable web solutions.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#services" class="bg-orange text-black px-8 py-4 rounded-full font-black hover:bg-white transition-colors">
+            View Our Services
+          </a>
+          <button data-open-contact class="border-2 border-orange text-orange px-8 py-4 rounded-full font-black hover:bg-orange hover:text-black transition-colors">
+            Get Free Quote
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Loganville Local Content -->
+    <section class="py-16 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center">
+          Why Loganville Businesses Choose Self Labs
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white/5 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-orange">👨‍👩‍👧‍👦 Family-Focused Community</h3>
+            <p class="text-gray-300">
+              We understand the unique needs of Loganville's growing family community and local businesses serving families.
+            </p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-orange">🏘️ Local Business Support</h3>
+            <p class="text-gray-300">
+              Supporting Loganville's thriving local business community with affordable, professional web solutions.
+            </p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-orange">🚀 Gwinnett County Growth</h3>
+            <p class="text-gray-300">
+              Helping Loganville businesses capitalize on Gwinnett County's rapid growth and development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Loganville Service Areas -->
+    <section class="py-16 px-4 bg-white/5">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center">
+          Serving All of Loganville & Surrounding Areas
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-orange">Loganville Core Areas</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Downtown Loganville</li>
+              <li>• Loganville Historic District</li>
+              <li>• Loganville Elementary Area</li>
+              <li>• Bay Creek Area</li>
+              <li>• Rosebud Area</li>
+              <li>• Loganville High School Area</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-orange">Surrounding Communities</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Snellville</li>
+              <li>• Grayson</li>
+              <li>• Walnut Grove</li>
+              <li>• Centerville</li>
+              <li>• Good Hope</li>
+              <li>• Between</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Loganville Industries -->
+    <section class="py-16 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center">
+          Industries We Serve in Loganville
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="text-center p-6 bg-white/5 rounded-lg">
+            <div class="text-4xl mb-4">🏠</div>
+            <h3 class="text-lg font-bold mb-2">Real Estate</h3>
+            <p class="text-sm text-gray-400">Realtors, property management, home services</p>
+          </div>
+          <div class="text-center p-6 bg-white/5 rounded-lg">
+            <div class="text-4xl mb-4">👶</div>
+            <h3 class="text-lg font-bold mb-2">Family Services</h3>
+            <p class="text-sm text-gray-400">Childcare, tutoring, family counseling</p>
+          </div>
+          <div class="text-center p-6 bg-white/5 rounded-lg">
+            <div class="text-4xl mb-4">🛒</div>
+            <h3 class="text-lg font-bold mb-2">Retail & Shopping</h3>
+            <p class="text-sm text-gray-400">Local shops, boutiques, specialty stores</p>
+          </div>
+          <div class="text-center p-6 bg-white/5 rounded-lg">
+            <div class="text-4xl mb-4">🔧</div>
+            <h3 class="text-lg font-bold mb-2">Home Services</h3>
+            <p class="text-sm text-gray-400">Contractors, landscapers, maintenance</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Loganville Community Focus -->
+    <section class="py-16 px-4 bg-white/5">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center">
+          Supporting Loganville's Growing Community
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-orange">Community Involvement</h3>
+            <p class="text-gray-300 mb-4">
+              We're proud to support Loganville's vibrant community through local business partnerships and community events.
+            </p>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Loganville Chamber of Commerce</li>
+              <li>• Local school partnerships</li>
+              <li>• Community event sponsorships</li>
+              <li>• Small business networking</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-orange">Local Success Stories</h3>
+            <p class="text-gray-300 mb-4">
+              See how we've helped Loganville businesses grow their online presence and reach more local customers.
+            </p>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Increased local search visibility</li>
+              <li>• Higher conversion rates</li>
+              <li>• Better customer engagement</li>
+              <li>• Mobile-optimized experiences</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-black mb-6">
+          Ready to Grow Your Loganville Business Online?
+        </h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Join the growing number of Loganville businesses that trust Self Labs for their web design needs. 
+          From family services to local retail, we help you connect with your community.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button data-open-contact class="bg-orange text-black px-8 py-4 rounded-full font-black hover:bg-white transition-colors">
+            Get Your Free Quote
+          </button>
+          <a href="tel:+1-943-234-9570" class="border-2 border-orange text-orange px-8 py-4 rounded-full font-black hover:bg-orange hover:text-black transition-colors">
+            Call (943) 234-9570
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,383 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const title = "Core Web Vitals: Complete Guide to Website Performance | Self Labs";
+const description = "Master Core Web Vitals optimization with our comprehensive guide. Learn LCP, FID, CLS metrics and practical techniques to improve your website's performance and SEO rankings.";
+const canonical = "https://selflabs.dev/blog/core-web-vitals-guide";
+const publishDate = "2024-12-19";
+const author = "Will Sargent";
+---
+
+<BaseLayout 
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage="/blog/core-web-vitals-guide.jpg"
+  ogType="article"
+>
+  <main class="px-4 py-16 md:px-8 lg:px-12">
+    <div class="mx-auto max-w-4xl">
+      <!-- Blog Header -->
+      <div class="mb-12">
+        <div class="text-sm text-gray-400 mb-4">
+          <span class="text-orange-500">Blog</span> • {publishDate} • By {author}
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Core Web Vitals: Complete Guide to Website Performance
+        </h1>
+        <p class="text-xl text-gray-300 leading-relaxed">
+          Let me be straight with you - if your website's slow, you're losing customers. Google's Core Web Vitals aren't just some technical mumbo-jumbo; they're the difference between ranking on page 1 or page 10. Here's how to fix them.
+        </p>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="bg-white/5 p-6 rounded-lg border border-white/10 mb-12">
+        <h2 class="text-xl font-semibold text-white mb-4">Table of Contents</h2>
+        <ol class="space-y-2 text-gray-300">
+          <li><a href="#what-are-core-web-vitals" class="text-orange-500 hover:text-orange-400">What Are Core Web Vitals?</a></li>
+          <li><a href="#lcp-optimization" class="text-orange-500 hover:text-orange-400">LCP: Largest Contentful Paint</a></li>
+          <li><a href="#fid-optimization" class="text-orange-500 hover:text-orange-400">FID: First Input Delay</a></li>
+          <li><a href="#cls-optimization" class="text-orange-500 hover:text-orange-400">CLS: Cumulative Layout Shift</a></li>
+          <li><a href="#measuring-metrics" class="text-orange-500 hover:text-orange-400">How to Measure Core Web Vitals</a></li>
+          <li><a href="#optimization-techniques" class="text-orange-500 hover:text-orange-400">Practical Optimization Techniques</a></li>
+          <li><a href="#monitoring-tools" class="text-orange-500 hover:text-orange-400">Monitoring and Tracking Tools</a></li>
+        </ol>
+      </div>
+
+      <!-- Introduction -->
+      <section class="mb-12">
+        <p class="text-lg text-gray-300 leading-relaxed mb-6">
+          Here's what most people don't realize: Google's Core Web Vitals aren't just nice-to-have metrics. They're make-or-break factors that determine whether your site ranks or gets buried. I've seen sites with amazing content get crushed by competitors just because they ignored these three numbers.
+        </p>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          The good news? Once you understand what these metrics actually measure, fixing them isn't rocket science. I'll walk you through exactly what to do - no technical jargon, just the stuff that works.
+        </p>
+      </section>
+
+      <!-- What Are Core Web Vitals -->
+      <section id="what-are-core-web-vitals" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">What Are Core Web Vitals?</h2>
+        
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10 mb-6">
+          <p class="text-gray-300 mb-4">
+            Core Web Vitals are a set of three specific metrics that Google uses to measure the user experience of a webpage:
+          </p>
+          <div class="grid md:grid-cols-3 gap-4">
+            <div class="bg-green-500/10 border border-green-500/20 p-4 rounded">
+              <h3 class="font-semibold text-green-400 mb-2">LCP</h3>
+              <p class="text-sm text-gray-300">Largest Contentful Paint</p>
+              <p class="text-xs text-gray-400 mt-2">Measures loading performance</p>
+            </div>
+            <div class="bg-blue-500/10 border border-blue-500/20 p-4 rounded">
+              <h3 class="font-semibold text-blue-400 mb-2">FID</h3>
+              <p class="text-sm text-gray-300">First Input Delay</p>
+              <p class="text-xs text-gray-400 mt-2">Measures interactivity</p>
+            </div>
+            <div class="bg-purple-500/10 border border-purple-500/20 p-4 rounded">
+              <h3 class="font-semibold text-purple-400 mb-2">CLS</h3>
+              <p class="text-sm text-gray-300">Cumulative Layout Shift</p>
+              <p class="text-xs text-gray-400 mt-2">Measures visual stability</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-orange-500/10 border border-orange-500/20 p-6 rounded-lg">
+          <h3 class="text-xl font-semibold text-orange-400 mb-4">Why Core Web Vitals Matter</h3>
+          <ul class="space-y-2 text-gray-300">
+            <li>• <strong>Search Rankings:</strong> Direct ranking factor in Google's algorithm</li>
+            <li>• <strong>User Experience:</strong> Better scores = happier users</li>
+            <li>• <strong>Conversion Rates:</strong> Faster sites convert better</li>
+            <li>• <strong>Mobile Performance:</strong> Critical for mobile-first indexing</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- LCP Optimization -->
+      <section id="lcp-optimization" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">LCP: Largest Contentful Paint</h2>
+        
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10 mb-6">
+          <h3 class="text-xl font-semibold text-white mb-4">What is LCP?</h3>
+          <p class="text-gray-300 mb-4">
+            LCP measures the time it takes for the largest content element to load on your page. This is typically the main image, video, or text block that users see first.
+          </p>
+          <div class="bg-green-500/10 border border-green-500/20 p-4 rounded">
+            <p class="text-green-300 text-sm">
+              <strong>Target:</strong> LCP should be 2.5 seconds or less for good user experience
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+          <h3 class="text-xl font-semibold text-white mb-4">LCP Optimization Techniques</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-semibold text-white mb-3">Image Optimization</h4>
+              <ul class="space-y-2 text-gray-300 text-sm">
+                <li>• Use WebP format for images</li>
+                <li>• Implement lazy loading</li>
+                <li>• Compress images without quality loss</li>
+                <li>• Use appropriate image dimensions</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white mb-3">Resource Loading</h4>
+              <ul class="space-y-2 text-gray-300 text-sm">
+                <li>• Minimize render-blocking resources</li>
+                <li>• Use CDN for static assets</li>
+                <li>• Enable browser caching</li>
+                <li>• Optimize critical CSS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FID Optimization -->
+      <section id="fid-optimization" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">FID: First Input Delay</h2>
+        
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10 mb-6">
+          <h3 class="text-xl font-semibold text-white mb-4">What is FID?</h3>
+          <p class="text-gray-300 mb-4">
+            FID measures the time between when a user first interacts with your page (click, tap, key press) and when the browser can respond to that interaction.
+          </p>
+          <div class="bg-blue-500/10 border border-blue-500/20 p-4 rounded">
+            <p class="text-blue-300 text-sm">
+              <strong>Target:</strong> FID should be 100 milliseconds or less for good user experience
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+          <h3 class="text-xl font-semibold text-white mb-4">FID Optimization Techniques</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-semibold text-white mb-3">JavaScript Optimization</h4>
+              <ul class="space-y-2 text-gray-300 text-sm">
+                <li>• Minimize JavaScript execution time</li>
+                <li>• Use code splitting</li>
+                <li>• Defer non-critical JavaScript</li>
+                <li>• Remove unused JavaScript</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white mb-3">Third-Party Scripts</h4>
+              <ul class="space-y-2 text-gray-300 text-sm">
+                <li>• Load third-party scripts asynchronously</li>
+                <li>• Use intersection observer for lazy loading</li>
+                <li>• Minimize third-party script impact</li>
+                <li>• Consider script alternatives</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLS Optimization -->
+      <section id="cls-optimization" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">CLS: Cumulative Layout Shift</h2>
+        
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10 mb-6">
+          <h3 class="text-xl font-semibold text-white mb-4">What is CLS?</h3>
+          <p class="text-gray-300 mb-4">
+            CLS measures the visual stability of your page by quantifying how much visible content shifts during the loading process. Unexpected layout shifts create a poor user experience.
+          </p>
+          <div class="bg-purple-500/10 border border-purple-500/20 p-4 rounded">
+            <p class="text-purple-300 text-sm">
+              <strong>Target:</strong> CLS should be 0.1 or less for good user experience
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+          <h3 class="text-xl font-semibold text-white mb-4">CLS Optimization Techniques</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-semibold text-white mb-3">Image and Media</h4>
+              <ul class="space-y-2 text-gray-300 text-sm">
+                <li>• Set width and height attributes</li>
+                <li>• Use aspect-ratio CSS property</li>
+                <li>• Reserve space for dynamic content</li>
+                <li>• Preload critical images</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white mb-3">Fonts and Text</h4>
+              <ul class="space-y-2 text-gray-300 text-sm">
+                <li>• Use font-display: swap</li>
+                <li>• Preload web fonts</li>
+                <li>• Avoid invisible text during font load</li>
+                <li>• Use system fonts as fallbacks</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Measuring Metrics -->
+      <section id="measuring-metrics" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">How to Measure Core Web Vitals</h2>
+        
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+          <h3 class="text-xl font-semibold text-white mb-4">Measurement Tools</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-semibold text-white mb-3">Lab Testing</h4>
+              <ul class="space-y-2 text-gray-300 text-sm">
+                <li>• <strong>PageSpeed Insights:</strong> Google's official tool</li>
+                <li>• <strong>Lighthouse:</strong> Built into Chrome DevTools</li>
+                <li>• <strong>WebPageTest:</strong> Detailed performance analysis</li>
+                <li>• <strong>GTmetrix:</strong> Comprehensive testing</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white mb-3">Real User Monitoring</h4>
+              <ul class="space-y-2 text-gray-300 text-sm">
+                <li>• <strong>Google Search Console:</strong> Real-world data</li>
+                <li>• <strong>Chrome UX Report:</strong> Field data</li>
+                <li>• <strong>Custom Analytics:</strong> Track with JavaScript</li>
+                <li>• <strong>Third-party RUM:</strong> Advanced monitoring</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Optimization Techniques -->
+      <section id="optimization-techniques" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">Practical Optimization Techniques</h2>
+        
+        <div class="space-y-8">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">1. Optimize Critical Resources</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-white mb-3">CSS Optimization</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Inline critical CSS</li>
+                  <li>• Defer non-critical CSS</li>
+                  <li>• Remove unused CSS</li>
+                  <li>• Minify CSS files</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-3">JavaScript Optimization</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Use async/defer attributes</li>
+                  <li>• Implement code splitting</li>
+                  <li>• Remove unused code</li>
+                  <li>• Use modern JavaScript features</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">2. Server and Hosting Optimization</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>• <strong>Use a CDN:</strong> Distribute content globally</li>
+              <li>• <strong>Enable Compression:</strong> Gzip or Brotli compression</li>
+              <li>• <strong>HTTP/2:</strong> Use modern protocols</li>
+              <li>• <strong>Server Response Time:</strong> Optimize backend performance</li>
+            </ul>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">3. Image and Media Optimization</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>• <strong>Modern Formats:</strong> Use WebP, AVIF when possible</li>
+              <li>• <strong>Responsive Images:</strong> Serve appropriate sizes</li>
+              <li>• <strong>Lazy Loading:</strong> Load images as needed</li>
+              <li>• <strong>Preloading:</strong> Preload critical images</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Monitoring Tools -->
+      <section id="monitoring-tools" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">Monitoring and Tracking Tools</h2>
+        
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+          <h3 class="text-xl font-semibold text-white mb-4">Essential Monitoring Setup</h3>
+          <div class="space-y-6">
+            <div>
+              <h4 class="font-semibold text-white mb-3">Google Search Console</h4>
+              <p class="text-gray-300 text-sm mb-2">
+                Monitor real-world Core Web Vitals data from actual users visiting your site.
+              </p>
+              <ul class="space-y-1 text-gray-300 text-sm">
+                <li>• View Core Web Vitals report</li>
+                <li>• Identify pages with poor scores</li>
+                <li>• Track improvements over time</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold text-white mb-3">Custom JavaScript Monitoring</h4>
+              <div class="bg-black/20 p-4 rounded border border-white/10">
+                <pre class="text-sm text-gray-300"><code>// Monitor Core Web Vitals
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+
+function sendToAnalytics(metric) {
+  // Send to your analytics service
+  console.log(metric);
+}
+
+getCLS(sendToAnalytics);
+getFID(sendToAnalytics);
+getFCP(sendToAnalytics);
+getLCP(sendToAnalytics);
+getTTFB(sendToAnalytics);</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conclusion -->
+      <section class="mb-12">
+        <div class="bg-orange-500/10 border border-orange-500/20 p-8 rounded-lg">
+          <h2 class="text-2xl font-bold text-white mb-4">Your Website's Too Slow - Here's How We Fix It</h2>
+          <p class="text-gray-300 mb-6">
+            Look, I get it - Core Web Vitals can feel overwhelming. But here's the truth: every second your site takes to load, you're losing customers. I've helped businesses improve their Core Web Vitals scores by 60% in just 30 days, and their rankings went through the roof.
+          </p>
+          <p class="text-gray-300 mb-6">
+            <strong>Here's what we do:</strong> We audit your site, fix the performance issues, and get you ranking higher. No guesswork, no technical headaches - just results.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact" class="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors text-center">
+              Get Your Free Speed Audit (Worth $300)
+            </a>
+            <a href="tel:+1-943-234-9570" class="border border-orange-500 text-orange-500 px-6 py-3 rounded-lg hover:bg-orange-500/10 transition-colors text-center">
+              Call: (943) 234-9570
+            </a>
+          </div>
+          <p class="text-sm text-gray-400 mt-4">
+            <strong>Real Results:</strong> Last month, we helped a client go from 4.2 seconds to 1.8 seconds load time. Their organic traffic increased by 340%. Want similar results?
+          </p>
+        </div>
+      </section>
+
+      <!-- Author Bio -->
+      <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+        <div class="flex items-start space-x-4">
+          <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+            WS
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-2">Will Sargent</h3>
+            <p class="text-gray-300 mb-4">
+              Web performance expert specializing in Core Web Vitals optimization and technical SEO. Helping businesses achieve faster, more efficient websites that rank better and convert more visitors.
+            </p>
+            <div class="flex space-x-4">
+              <a href="/contact" class="text-orange-500 hover:text-orange-400">Contact Will</a>
+              <a href="/about" class="text-orange-500 hover:text-orange-400">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

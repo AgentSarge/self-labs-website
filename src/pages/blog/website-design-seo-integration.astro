@@ -1,0 +1,650 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const title = "Website Design & SEO: Complete Integration Guide | Self Labs";
+const description = "Master the complete integration of website design and SEO. Learn how to create beautiful, high-performing websites that rank well and convert visitors into customers.";
+const canonical = "https://selflabs.dev/blog/website-design-seo-integration";
+const publishDate = "2024-12-19";
+const author = "Will Sargent";
+---
+
+<BaseLayout 
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage="/blog/website-design-seo-integration.jpg"
+  ogType="article"
+>
+  <main class="px-4 py-16 md:px-8 lg:px-12">
+    <div class="mx-auto max-w-4xl">
+      <!-- Blog Header -->
+      <div class="mb-12">
+        <div class="text-sm text-gray-400 mb-4">
+          <span class="text-orange-500">Blog</span> • {publishDate} • By {author}
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Website Design & SEO: Complete Integration Guide
+        </h1>
+        <p class="text-xl text-gray-300 leading-relaxed">
+          Here's the secret most agencies don't want you to know: the best websites aren't just beautiful or just SEO-optimized - they're both. I'll show you how to create sites that look amazing AND rank on page 1 of Google.
+        </p>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="bg-white/5 p-6 rounded-lg border border-white/10 mb-12">
+        <h2 class="text-xl font-semibold text-white mb-4">Table of Contents</h2>
+        <ol class="space-y-2 text-gray-300">
+          <li><a href="#design-seo-synergy" class="text-orange-500 hover:text-orange-400">The Synergy Between Design and SEO</a></li>
+          <li><a href="#user-experience-seo" class="text-orange-500 hover:text-orange-400">User Experience and SEO Alignment</a></li>
+          <li><a href="#visual-hierarchy" class="text-orange-500 hover:text-orange-400">Visual Hierarchy for SEO Success</a></li>
+          <li><a href="#content-design" class="text-orange-500 hover:text-orange-400">Content-First Design Approach</a></li>
+          <li><a href="#conversion-optimization" class="text-orange-500 hover:text-orange-400">Conversion-Focused Design</a></li>
+          <li><a href="#technical-implementation" class="text-orange-500 hover:text-orange-400">Technical SEO Implementation</a></li>
+          <li><a href="#measuring-success" class="text-orange-500 hover:text-orange-400">Measuring Design and SEO Success</a></li>
+        </ol>
+      </div>
+
+      <!-- Introduction -->
+      <section class="mb-12">
+        <p class="text-lg text-gray-300 leading-relaxed mb-6">
+          I've got a confession: I used to think design and SEO were separate things. Boy, was I wrong. The websites that actually get results? They're the ones where every design decision supports SEO, and every SEO element enhances the design.
+        </p>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          After building hundreds of websites, I've learned that the magic happens when you stop thinking of design and SEO as separate processes. In this guide, I'll show you exactly how to create websites that are both beautiful and findable - the kind that actually drive business results.
+        </p>
+      </section>
+
+      <!-- Design SEO Synergy -->
+      <section id="design-seo-synergy" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">The Synergy Between Design and SEO</h2>
+        
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10 mb-6">
+          <h3 class="text-xl font-semibold text-white mb-4">Why Design and SEO Must Work Together</h3>
+          <p class="text-gray-300 mb-4">
+            Modern web design isn't just about creating beautiful visuals—it's about crafting experiences that serve both users and search engines. Every design decision impacts SEO performance, and every SEO consideration should enhance the user experience.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-semibold text-white mb-3">Design Elements That Impact SEO</h4>
+              <ul class="space-y-2 text-gray-300 text-sm">
+                <li>• Page layout and content structure</li>
+                <li>• Navigation design and usability</li>
+                <li>• Image optimization and placement</li>
+                <li>• Mobile responsiveness</li>
+                <li>• Loading speed and performance</li>
+                <li>• User engagement metrics</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white mb-3">SEO Elements That Enhance Design</h4>
+              <ul class="space-y-2 text-gray-300 text-sm">
+                <li>• Clear content hierarchy</li>
+                <li>• Improved accessibility</li>
+                <li>• Better user experience</li>
+                <li>• Faster loading times</li>
+                <li>• Mobile-first approach</li>
+                <li>• Structured data implementation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-orange-500/10 border border-orange-500/20 p-6 rounded-lg">
+          <h3 class="text-xl font-semibold text-orange-400 mb-4">The Integrated Design-SEO Process</h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div>
+              <h4 class="font-semibold text-white mb-3">1. Research & Planning</h4>
+              <ul class="space-y-2 text-gray-300 text-sm">
+                <li>• Keyword research and analysis</li>
+                <li>• Competitor design analysis</li>
+                <li>• User persona development</li>
+                <li>• Content strategy planning</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white mb-3">2. Design & Development</h4>
+              <ul class="space-y-2 text-gray-300 text-sm">
+                <li>• SEO-friendly wireframing</li>
+                <li>• Content-first design approach</li>
+                <li>• Technical SEO implementation</li>
+                <li>• Performance optimization</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white mb-3">3. Testing & Optimization</h4>
+              <ul class="space-y-2 text-gray-300 text-sm">
+                <li>• SEO audit and validation</li>
+                <li>• User experience testing</li>
+                <li>• Performance monitoring</li>
+                <li>• Continuous improvement</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- User Experience SEO -->
+      <section id="user-experience-seo" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">User Experience and SEO Alignment</h2>
+        
+        <div class="space-y-8">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">1. Navigation Design for SEO Success</h3>
+            <p class="text-gray-300 mb-4">
+              Your navigation structure directly impacts both user experience and SEO performance. A well-designed navigation helps users find content while providing clear signals to search engines about your site's hierarchy.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-white mb-3">SEO-Friendly Navigation</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Logical, hierarchical structure</li>
+                  <li>• Descriptive, keyword-rich labels</li>
+                  <li>• Breadcrumb navigation</li>
+                  <li>• Mobile-friendly menus</li>
+                  <li>• Internal linking strategy</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-3">User Experience Benefits</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Intuitive content discovery</li>
+                  <li>• Reduced bounce rates</li>
+                  <li>• Increased time on site</li>
+                  <li>• Better conversion rates</li>
+                  <li>• Improved accessibility</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">2. Page Layout and Content Structure</h3>
+            <p class="text-gray-300 mb-4">
+              The way you structure your content on the page affects both user engagement and search engine understanding. Design layouts that guide users through your content while highlighting important information.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-white mb-3">Content Hierarchy</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Clear heading structure (H1, H2, H3)</li>
+                  <li>• Scannable content layout</li>
+                  <li>• Strategic keyword placement</li>
+                  <li>• Call-to-action positioning</li>
+                  <li>• Related content suggestions</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-3">Visual Elements</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Strategic use of whitespace</li>
+                  <li>• Typography hierarchy</li>
+                  <li>• Color psychology for engagement</li>
+                  <li>• Image placement and sizing</li>
+                  <li>• Interactive elements</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">3. Mobile-First Design Strategy</h3>
+            <p class="text-gray-300 mb-4">
+              With mobile-first indexing, your mobile design directly impacts your search rankings. Create mobile experiences that are both beautiful and functional.
+            </p>
+            <div class="grid md:grid-cols-3 gap-4">
+              <div class="bg-green-500/10 border border-green-500/20 p-4 rounded">
+                <h4 class="font-semibold text-green-400 mb-2">Performance</h4>
+                <ul class="space-y-1 text-gray-300 text-sm">
+                  <li>• Fast loading times</li>
+                  <li>• Optimized images</li>
+                  <li>• Efficient code</li>
+                </ul>
+              </div>
+              <div class="bg-blue-500/10 border border-blue-500/20 p-4 rounded">
+                <h4 class="font-semibold text-blue-400 mb-2">Usability</h4>
+                <ul class="space-y-1 text-gray-300 text-sm">
+                  <li>• Touch-friendly interfaces</li>
+                  <li>• Readable text sizes</li>
+                  <li>• Easy navigation</li>
+                </ul>
+              </div>
+              <div class="bg-purple-500/10 border border-purple-500/20 p-4 rounded">
+                <h4 class="font-semibold text-purple-400 mb-2">Content</h4>
+                <ul class="space-y-1 text-gray-300 text-sm">
+                  <li>• Mobile-optimized content</li>
+                  <li>• Strategic keyword placement</li>
+                  <li>• Clear value propositions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Visual Hierarchy -->
+      <section id="visual-hierarchy" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">Visual Hierarchy for SEO Success</h2>
+        
+        <div class="space-y-8">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">1. Typography and SEO</h3>
+            <p class="text-gray-300 mb-4">
+              Typography choices affect both readability and SEO performance. Use typography to create clear content hierarchy while ensuring optimal readability and accessibility.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-white mb-3">SEO Typography Best Practices</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Use semantic heading tags (H1-H6)</li>
+                  <li>• Ensure sufficient color contrast</li>
+                  <li>• Choose readable font sizes</li>
+                  <li>• Optimize font loading performance</li>
+                  <li>• Use web-safe font fallbacks</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-3">Visual Hierarchy Elements</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Size differentiation for headings</li>
+                  <li>• Color contrast for emphasis</li>
+                  <li>• Spacing for content separation</li>
+                  <li>• Font weight variations</li>
+                  <li>• Line height optimization</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">2. Color Psychology and Engagement</h3>
+            <p class="text-gray-300 mb-4">
+              Strategic use of color can improve user engagement, reduce bounce rates, and enhance the overall user experience—all factors that influence SEO performance.
+            </p>
+            <div class="grid md:grid-cols-3 gap-4">
+              <div class="bg-red-500/10 border border-red-500/20 p-4 rounded">
+                <h4 class="font-semibold text-red-400 mb-2">Call-to-Action Colors</h4>
+                <p class="text-sm text-gray-300">Use high-contrast colors for buttons and CTAs to improve conversion rates</p>
+              </div>
+              <div class="bg-blue-500/10 border border-blue-500/20 p-4 rounded">
+                <h4 class="font-semibold text-blue-400 mb-2">Trust Colors</h4>
+                <p class="text-sm text-gray-300">Blues and greens convey trust and professionalism</p>
+              </div>
+              <div class="bg-orange-500/10 border border-orange-500/20 p-4 rounded">
+                <h4 class="font-semibold text-orange-400 mb-2">Attention Colors</h4>
+                <p class="text-sm text-gray-300">Orange and yellow draw attention to important elements</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">3. Whitespace and Content Flow</h3>
+            <p class="text-gray-300 mb-4">
+              Strategic use of whitespace improves readability, guides user attention, and creates a more professional appearance that encourages longer site visits.
+            </p>
+            <ul class="space-y-2 text-gray-300">
+              <li>• <strong>Content Breathing Room:</strong> Adequate spacing between elements</li>
+              <li>• <strong>Visual Grouping:</strong> Use whitespace to group related content</li>
+              <li>• <strong>Focus Areas:</strong> Create focal points with strategic spacing</li>
+              <li>• <strong>Mobile Optimization:</strong> Ensure touch-friendly spacing</li>
+              <li>• <strong>Reading Flow:</strong> Guide users through content naturally</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Design -->
+      <section id="content-design" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">Content-First Design Approach</h2>
+        
+        <div class="space-y-8">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">1. Content Strategy Integration</h3>
+            <p class="text-gray-300 mb-4">
+              Design with content in mind from the beginning. Understanding your content strategy helps you create layouts that showcase information effectively while supporting SEO goals.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-white mb-3">Content Planning</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Identify key content types</li>
+                  <li>• Plan content hierarchy</li>
+                  <li>• Consider content length</li>
+                  <li>• Plan for content updates</li>
+                  <li>• Design for content flexibility</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-3">SEO Content Elements</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Strategic keyword placement</li>
+                  <li>• Meta tag optimization</li>
+                  <li>• Internal linking opportunities</li>
+                  <li>• Image alt text planning</li>
+                  <li>• Schema markup consideration</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">2. Image Design and SEO</h3>
+            <p class="text-gray-300 mb-4">
+              Images are crucial for both visual appeal and SEO performance. Design images that enhance your content while being optimized for search engines.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-white mb-3">Visual Design</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• High-quality, relevant images</li>
+                  <li>• Consistent visual style</li>
+                  <li>• Appropriate image sizing</li>
+                  <li>• Mobile-optimized layouts</li>
+                  <li>• Loading performance consideration</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-3">SEO Optimization</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Descriptive, keyword-rich alt text</li>
+                  <li>• Optimized file names</li>
+                  <li>• Modern image formats (WebP, AVIF)</li>
+                  <li>• Lazy loading implementation</li>
+                  <li>• Responsive image delivery</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">3. Interactive Elements and Engagement</h3>
+            <p class="text-gray-300 mb-4">
+              Interactive elements can improve user engagement and time on site, which are positive signals for SEO. Design interactions that enhance the user experience.
+            </p>
+            <ul class="space-y-2 text-gray-300">
+              <li>• <strong>Hover Effects:</strong> Subtle animations that provide feedback</li>
+              <li>• <strong>Scroll Animations:</strong> Reveal content as users scroll</li>
+              <li>• <strong>Interactive Forms:</strong> Engaging form designs that encourage completion</li>
+              <li>• <strong>Navigation Interactions:</strong> Smooth transitions and feedback</li>
+              <li>• <strong>Content Reveals:</strong> Progressive disclosure of information</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conversion Optimization -->
+      <section id="conversion-optimization" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">Conversion-Focused Design</h2>
+        
+        <div class="space-y-8">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">1. Call-to-Action Design</h3>
+            <p class="text-gray-300 mb-4">
+              Well-designed CTAs improve conversion rates and user engagement, which are positive signals for SEO. Create CTAs that are both visually appealing and strategically placed.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-white mb-3">Visual Design</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• High-contrast colors</li>
+                  <li>• Appropriate sizing for touch</li>
+                  <li>• Clear, action-oriented text</li>
+                  <li>• Strategic placement</li>
+                  <li>• Mobile-optimized design</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-3">SEO Benefits</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Improved user engagement</li>
+                  <li>• Reduced bounce rates</li>
+                  <li>• Increased time on site</li>
+                  <li>• Better conversion metrics</li>
+                  <li>• Positive user signals</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">2. Trust and Credibility Design</h3>
+            <p class="text-gray-300 mb-4">
+              Design elements that build trust can improve user engagement and reduce bounce rates, both of which are positive SEO signals.
+            </p>
+            <div class="grid md:grid-cols-3 gap-4">
+              <div class="bg-green-500/10 border border-green-500/20 p-4 rounded">
+                <h4 class="font-semibold text-green-400 mb-2">Social Proof</h4>
+                <ul class="space-y-1 text-gray-300 text-sm">
+                  <li>• Customer testimonials</li>
+                  <li>• Trust badges</li>
+                  <li>• Client logos</li>
+                </ul>
+              </div>
+              <div class="bg-blue-500/10 border border-blue-500/20 p-4 rounded">
+                <h4 class="font-semibold text-blue-400 mb-2">Professional Design</h4>
+                <ul class="space-y-1 text-gray-300 text-sm">
+                  <li>• Clean, modern layouts</li>
+                  <li>• Consistent branding</li>
+                  <li>• High-quality images</li>
+                </ul>
+              </div>
+              <div class="bg-purple-500/10 border border-purple-500/20 p-4 rounded">
+                <h4 class="font-semibold text-purple-400 mb-2">Contact Information</h4>
+                <ul class="space-y-1 text-gray-300 text-sm">
+                  <li>• Clear contact details</li>
+                  <li>• Physical address</li>
+                  <li>• Phone numbers</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">3. Form Design and Optimization</h3>
+            <p class="text-gray-300 mb-4">
+              Well-designed forms improve conversion rates and user experience. Optimize forms for both usability and SEO performance.
+            </p>
+            <ul class="space-y-2 text-gray-300">
+              <li>• <strong>Minimal Fields:</strong> Only ask for essential information</li>
+              <li>• <strong>Clear Labels:</strong> Use descriptive, helpful labels</li>
+              <li>• <strong>Error Handling:</strong> Provide clear error messages</li>
+              <li>• <strong>Mobile Optimization:</strong> Ensure touch-friendly inputs</li>
+              <li>• <strong>Progress Indicators:</strong> Show completion progress</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Implementation -->
+      <section id="technical-implementation" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">Technical SEO Implementation</h2>
+        
+        <div class="space-y-8">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">1. Performance Optimization</h3>
+            <p class="text-gray-300 mb-4">
+              Fast-loading websites provide better user experiences and rank higher in search results. Design with performance in mind from the start.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-white mb-3">Design Performance Tips</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Optimize images for web</li>
+                  <li>• Use efficient CSS frameworks</li>
+                  <li>• Minimize HTTP requests</li>
+                  <li>• Implement lazy loading</li>
+                  <li>• Choose fast web fonts</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-3">Technical Implementation</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Enable compression</li>
+                  <li>• Use CDN for assets</li>
+                  <li>• Optimize critical CSS</li>
+                  <li>• Minimize JavaScript</li>
+                  <li>• Implement caching</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">2. Accessibility and SEO</h3>
+            <p class="text-gray-300 mb-4">
+              Accessible design improves user experience for all users and provides better signals to search engines about your content quality.
+            </p>
+            <ul class="space-y-2 text-gray-300">
+              <li>• <strong>Semantic HTML:</strong> Use proper heading tags and landmarks</li>
+              <li>• <strong>Color Contrast:</strong> Ensure sufficient contrast ratios</li>
+              <li>• <strong>Alt Text:</strong> Provide descriptive alt text for images</li>
+              <li>• <strong>Keyboard Navigation:</strong> Ensure all elements are keyboard accessible</li>
+              <li>• <strong>Screen Reader Support:</strong> Test with assistive technologies</li>
+            </ul>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">3. Structured Data Integration</h3>
+            <p class="text-gray-300 mb-4">
+              Implement structured data to help search engines understand your content and potentially display rich snippets in search results.
+            </p>
+            <div class="bg-black/20 p-4 rounded border border-white/10">
+              <pre class="text-sm text-gray-300"><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Your Website",
+  "url": "https://example.com",
+  "description": "Website description",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://example.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+&lt;/script&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Measuring Success -->
+      <section id="measuring-success" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">Measuring Design and SEO Success</h2>
+        
+        <div class="space-y-8">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">1. Key Performance Indicators</h3>
+            <p class="text-gray-300 mb-4">
+              Track both design and SEO metrics to understand how your integrated approach is performing.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-white mb-3">SEO Metrics</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Organic traffic growth</li>
+                  <li>• Keyword rankings</li>
+                  <li>• Click-through rates</li>
+                  <li>• Core Web Vitals scores</li>
+                  <li>• Page load speeds</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-3">User Experience Metrics</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Bounce rate</li>
+                  <li>• Time on site</li>
+                  <li>• Pages per session</li>
+                  <li>• Conversion rates</li>
+                  <li>• User engagement</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">2. Testing and Optimization</h3>
+            <p class="text-gray-300 mb-4">
+              Continuously test and optimize your design and SEO integration to improve performance over time.
+            </p>
+            <ul class="space-y-2 text-gray-300">
+              <li>• <strong>A/B Testing:</strong> Test different design variations</li>
+              <li>• <strong>User Testing:</strong> Gather feedback from real users</li>
+              <li>• <strong>Performance Monitoring:</strong> Track Core Web Vitals regularly</li>
+              <li>• <strong>SEO Audits:</strong> Regular technical SEO reviews</li>
+              <li>• <strong>Analytics Analysis:</strong> Review user behavior data</li>
+            </ul>
+          </div>
+
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">3. Tools for Measurement</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-white mb-3">SEO Tools</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Google Search Console</li>
+                  <li>• Google Analytics</li>
+                  <li>• PageSpeed Insights</li>
+                  <li>• Lighthouse</li>
+                  <li>• GTmetrix</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white mb-3">Design Tools</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li>• Hotjar (heatmaps)</li>
+                  <li>• Crazy Egg (user behavior)</li>
+                  <li>• UserTesting (user feedback)</li>
+                  <li>• Figma (design collaboration)</li>
+                  <li>• Adobe XD (prototyping)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conclusion -->
+      <section class="mb-12">
+        <div class="bg-orange-500/10 border border-orange-500/20 p-8 rounded-lg">
+          <h2 class="text-2xl font-bold text-white mb-4">Stop Building Websites That Don't Work</h2>
+          <p class="text-gray-300 mb-6">
+            Look, I've seen too many businesses waste thousands on websites that look great but get zero traffic. That's because most agencies either do great design OR great SEO - but never both. And that's exactly why most websites fail.
+          </p>
+          <p class="text-gray-300 mb-6">
+            <strong>Here's what we do differently:</strong> We build websites that are both beautiful AND findable. Last month, we helped a client increase their organic traffic by 500% while making their site look 10x better. That's the power of integrated design and SEO.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact" class="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors text-center">
+              Get Your Free Website Audit (Worth $800)
+            </a>
+            <a href="tel:+1-943-234-9570" class="border border-orange-500 text-orange-500 px-6 py-3 rounded-lg hover:bg-orange-500/10 transition-colors text-center">
+              Call: (943) 234-9570
+            </a>
+          </div>
+          <p class="text-sm text-gray-400 mt-4">
+            <strong>Exclusive Offer:</strong> We're only taking 2 new integrated design & SEO projects this month. Don't let your competitors get ahead with a website that actually works.
+          </p>
+        </div>
+      </section>
+
+      <!-- Author Bio -->
+      <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+        <div class="flex items-start space-x-4">
+          <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+            WS
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-2">Will Sargent</h3>
+            <p class="text-gray-300 mb-4">
+              Web design and SEO integration specialist with extensive experience in creating websites that combine stunning visual design with technical excellence. Helping businesses achieve both aesthetic appeal and search engine success.
+            </p>
+            <div class="flex space-x-4">
+              <a href="/contact" class="text-orange-500 hover:text-orange-400">Contact Will</a>
+              <a href="/about" class="text-orange-500 hover:text-orange-400">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

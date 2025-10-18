@@ -1,0 +1,223 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Hero from "@/components/landing/Hero.astro";
+import Work from "@/components/landing/Work.astro";
+import Intro from "@/components/landing/Intro.astro";
+import Services from "@/components/landing/Services.astro";
+import Cta from "@/components/landing/Cta.astro";
+
+const seoProps = {
+  title: "Web Design Athens GA | Professional Website Design & Development | Self Labs",
+  description: "Professional web design services in Athens, GA. Custom websites for Athens businesses, startups, and UGA community. Fast, affordable, and reliable web development starting at $300.",
+  canonical: "/athens-ga-web-design",
+  ogType: "website",
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Self Labs Web Design",
+    "description": "Professional web design and development services in Athens, Georgia",
+    "url": "https://self-labs.io/athens-ga-web-design",
+    "logo": "https://self-labs.io/favicons/apple-touch-icon.png",
+    "email": "support@self-labs.io",
+    "priceRange": "$300-$2500+",
+    "serviceType": ["Website Design", "Website Development", "Website Maintenance", "SEO Services"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Athens",
+      "addressRegion": "GA",
+      "postalCode": "30601"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "33.9519",
+      "longitude": "-83.3576"
+    },
+    "areaServed": [
+      "Athens, GA",
+      "Monroe, GA",
+      "Watkinsville, GA",
+      "Bogart, GA",
+      "Winterville, GA"
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Athens Web Design Services",
+        "priceRange": "$300-$2500+",
+        "description": "Custom website design and development for Athens businesses"
+      },
+      {
+        "@type": "Offer",
+        "name": "Athens SEO Services",
+        "priceRange": "$200-$1000/month",
+        "description": "Local SEO optimization for Athens businesses"
+      }
+    ]
+  }
+};
+---
+
+<BaseLayout {...seoProps}>
+  <div class="bg-black text-white min-h-screen">
+    <!-- Athens Hero Section -->
+    <section class="relative bg-gradient-to-br from-orange/20 to-black py-20 px-4">
+      <div class="max-w-6xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-black mb-6">
+          Web Design Services in <span class="text-orange">Athens, GA</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-300">
+          Professional website design and development for Athens businesses, startups, and the UGA community. 
+          Serving the Classic City with modern, fast, and affordable web solutions.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#services" class="bg-orange text-black px-8 py-4 rounded-full font-black hover:bg-white transition-colors">
+            View Our Services
+          </a>
+          <button data-open-contact class="border-2 border-orange text-orange px-8 py-4 rounded-full font-black hover:bg-orange hover:text-black transition-colors">
+            Get Free Quote
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Athens Local Content -->
+    <section class="py-16 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center">
+          Why Athens Businesses Choose Self Labs
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white/5 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-orange">🏛️ UGA Community Focus</h3>
+            <p class="text-gray-300">
+              We understand the unique needs of Athens businesses, from student startups to established companies serving the university community.
+            </p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-orange">🚀 Startup-Friendly Pricing</h3>
+            <p class="text-gray-300">
+              Affordable web design solutions perfect for Athens startups and small businesses. No hidden fees, transparent pricing.
+            </p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-orange">⚡ Fast Turnaround</h3>
+            <p class="text-gray-300">
+              Quick delivery times that work with your business schedule. Most projects completed within 2-3 weeks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Athens Service Areas -->
+    <section class="py-16 px-4 bg-white/5">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center">
+          Serving All of Athens & Surrounding Areas
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-orange">Athens Core Areas</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Downtown Athens</li>
+              <li>• Five Points</li>
+              <li>• Normaltown</li>
+              <li>• Boulevard</li>
+              <li>• Eastside Athens</li>
+              <li>• Westside Athens</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-orange">Surrounding Communities</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Watkinsville</li>
+              <li>• Bogart</li>
+              <li>• Winterville</li>
+              <li>• Hull</li>
+              <li>• Arnoldsville</li>
+              <li>• Bishop</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Athens Industries -->
+    <section class="py-16 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-black mb-8 text-center">
+          Industries We Serve in Athens
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="text-center p-6 bg-white/5 rounded-lg">
+            <div class="text-4xl mb-4">🎓</div>
+            <h3 class="text-lg font-bold mb-2">Education</h3>
+            <p class="text-sm text-gray-400">UGA departments, tutoring services, educational consultants</p>
+          </div>
+          <div class="text-center p-6 bg-white/5 rounded-lg">
+            <div class="text-4xl mb-4">🏥</div>
+            <h3 class="text-lg font-bold mb-2">Healthcare</h3>
+            <p class="text-sm text-gray-400">Medical practices, dental offices, therapy services</p>
+          </div>
+          <div class="text-center p-6 bg-white/5 rounded-lg">
+            <div class="text-4xl mb-4">🍕</div>
+            <h3 class="text-lg font-bold mb-2">Restaurants</h3>
+            <p class="text-sm text-gray-400">Local eateries, food trucks, catering services</p>
+          </div>
+          <div class="text-center p-6 bg-white/5 rounded-lg">
+            <div class="text-4xl mb-4">💻</div>
+            <h3 class="text-lg font-bold mb-2">Technology</h3>
+            <p class="text-sm text-gray-400">Startups, tech companies, software developers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Athens SEO Section -->
+    <section class="py-16 px-4 bg-white/5">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-black mb-8">
+          Local SEO for Athens Businesses
+        </h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Get found by Athens customers searching for your services. Our local SEO strategies help you rank higher in Athens search results.
+        </p>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-black/50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-orange">Google My Business</h3>
+            <p class="text-gray-300">Optimize your Athens business listing for maximum visibility</p>
+          </div>
+          <div class="bg-black/50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-orange">Local Keywords</h3>
+            <p class="text-gray-300">Target Athens-specific search terms your customers use</p>
+          </div>
+          <div class="bg-black/50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-orange">Reviews & Citations</h3>
+            <p class="text-gray-300">Build your reputation in the Athens business community</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-black mb-6">
+          Ready to Grow Your Athens Business Online?
+        </h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Join the growing number of Athens businesses that trust Self Labs for their web design needs. 
+          From downtown restaurants to UGA startups, we've got you covered.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button data-open-contact class="bg-orange text-black px-8 py-4 rounded-full font-black hover:bg-white transition-colors">
+            Get Your Free Quote
+          </button>
+          <a href="tel:+1-943-234-9570" class="border-2 border-orange text-orange px-8 py-4 rounded-full font-black hover:bg-orange hover:text-black transition-colors">
+            Call (943) 234-9570
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

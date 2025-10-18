@@ -1,0 +1,343 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SocialShare from "@/components/SocialShare.astro";
+import EmailSignup from "@/components/EmailSignup.astro";
+
+const title = "10 Essential SEO Best Practices for 2025 | Self Labs Web Design";
+const description = "Discover the top 10 SEO best practices for 2025. Learn keyword optimization, technical SEO, and performance strategies to boost your website's search rankings.";
+const canonical = "https://self-labs.io/blog/seo-best-practices-2025";
+const publishDate = "2024-12-19";
+const author = "Will Sargent";
+const postTitle = "10 Essential SEO Best Practices for 2025";
+const postUrl = "https://self-labs.io/blog/seo-best-practices-2025";
+const postDescription = "Look, I've been doing SEO for over 5 years now, and I've seen what actually works. These aren't just theories - these are the proven strategies that'll boost your rankings and drive real traffic to your site.";
+---
+
+<BaseLayout 
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage="/blog/seo-best-practices-2025.jpg"
+  ogType="article"
+>
+  <main class="px-4 py-16 md:px-8 lg:px-12">
+    <div class="mx-auto max-w-4xl">
+      <!-- Blog Header -->
+      <div class="mb-12">
+        <div class="text-sm text-gray-400 mb-4">
+          <span class="text-orange-500">Blog</span> • {publishDate} • By {author}
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          10 Essential SEO Best Practices for 2025
+        </h1>
+        <p class="text-xl text-gray-300 leading-relaxed">
+          Look, I've been doing SEO for over 5 years now, and I've seen what actually works. These aren't just theories - these are the proven strategies that'll boost your rankings and drive real traffic to your site.
+        </p>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="bg-white/5 p-6 rounded-lg border border-white/10 mb-12">
+        <h2 class="text-xl font-semibold text-white mb-4">Table of Contents</h2>
+        <ol class="space-y-2 text-gray-300">
+          <li><a href="#keyword-optimization" class="text-orange-500 hover:text-orange-400">1. Strategic Keyword Optimization</a></li>
+          <li><a href="#content-quality" class="text-orange-500 hover:text-orange-400">2. Content Quality & Uniqueness</a></li>
+          <li><a href="#technical-seo" class="text-orange-500 hover:text-orange-400">3. Technical SEO Fundamentals</a></li>
+          <li><a href="#user-experience" class="text-orange-500 hover:text-orange-400">4. User Experience Optimization</a></li>
+          <li><a href="#page-speed" class="text-orange-500 hover:text-orange-400">5. Page Speed & Performance</a></li>
+          <li><a href="#mobile-optimization" class="text-orange-500 hover:text-orange-400">6. Mobile-First Optimization</a></li>
+          <li><a href="#image-optimization" class="text-orange-500 hover:text-orange-400">7. Image SEO & Optimization</a></li>
+          <li><a href="#internal-linking" class="text-orange-500 hover:text-orange-400">8. Strategic Internal Linking</a></li>
+          <li><a href="#analytics-tracking" class="text-orange-500 hover:text-orange-400">9. Analytics & Performance Tracking</a></li>
+          <li><a href="#backlink-building" class="text-orange-500 hover:text-orange-400">10. Quality Backlink Building</a></li>
+        </ol>
+      </div>
+
+      <!-- Introduction -->
+      <section class="mb-12">
+        <p class="text-lg text-gray-300 leading-relaxed mb-6">
+          Here's the thing about SEO in 2025 - it's not just about stuffing keywords anymore. Google's gotten way smarter, and honestly, that's a good thing. Now we can focus on what actually matters: creating content that people want to read and websites that actually work.
+        </p>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          I've been in the trenches with SEO for years, and I've seen what works and what doesn't. In this guide, I'm sharing the 10 strategies that've actually moved the needle for my clients. No fluff, no theory - just the stuff that gets results.
+        </p>
+      </section>
+
+      <!-- Social Sharing -->
+      <SocialShare 
+        title={postTitle}
+        url={postUrl}
+        description={postDescription}
+      />
+
+      <!-- Email Signup -->
+      <EmailSignup />
+
+      <!-- 1. Strategic Keyword Optimization -->
+      <section id="keyword-optimization" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">1. Strategic Keyword Optimization</h2>
+        
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10 mb-6">
+          <h3 class="text-xl font-semibold text-white mb-4">Front-Load Your Main Keywords</h3>
+          <p class="text-gray-300 mb-4">
+            Here's something I learned the hard way - Google really cares about where you put your keywords. Put your main keyword in the first 25 words, and you'll see a difference. Trust me on this one.
+          </p>
+          <div class="bg-black/20 p-4 rounded border border-white/10">
+            <p class="text-sm text-gray-400 mb-2">Here's what I mean:</p>
+            <p class="text-gray-300">
+              <strong>✅ This works:</strong> "SEO best practices for 2025 include keyword optimization, technical SEO, and user experience improvements."<br>
+              <strong>❌ This doesn't:</strong> "In this guide, we'll explore various strategies including SEO best practices, content marketing, and social media optimization."
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+          <h3 class="text-xl font-semibold text-white mb-4">Title Tag Optimization</h3>
+          <p class="text-gray-300 mb-4">
+            Your title tag? That's your first impression with Google. Get this wrong, and you're fighting an uphill battle. Here's what I've learned works:
+          </p>
+          <ul class="space-y-2 text-gray-300">
+            <li>• Start with your main keyword when possible</li>
+            <li>• Keep titles between 50-60 characters (Google cuts them off after that)</li>
+            <li>• Write titles that make people want to click</li>
+            <li>• Stick to one primary keyword per title</li>
+            <li>• Add your brand name at the end</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 2. Content Quality & Uniqueness -->
+      <section id="content-quality" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">2. Content Quality & Uniqueness</h2>
+        
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10 mb-6">
+          <h3 class="text-xl font-semibold text-white mb-4">Avoid Duplicate Content</h3>
+          <p class="text-gray-300 mb-4">
+            Google penalizes websites with duplicate content. Ensure every page on your site has unique, valuable content that serves a specific purpose for your audience.
+          </p>
+          <div class="bg-orange-500/10 border border-orange-500/20 p-4 rounded">
+            <p class="text-orange-300 text-sm">
+              <strong>Pro Tip:</strong> Use canonical tags to consolidate similar content and prevent duplicate content issues.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+          <h3 class="text-xl font-semibold text-white mb-4">Content Depth & Value</h3>
+          <p class="text-gray-300 mb-4">
+            Create comprehensive, in-depth content that thoroughly covers your topic. Google favors content that provides complete answers to user queries.
+          </p>
+          <ul class="space-y-2 text-gray-300">
+            <li>• Aim for 1,500+ words for comprehensive topics</li>
+            <li>• Include actionable tips and examples</li>
+            <li>• Use data and statistics to support claims</li>
+            <li>• Update content regularly to maintain freshness</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 3. Technical SEO Fundamentals -->
+      <section id="technical-seo" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">3. Technical SEO Fundamentals</h2>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">Meta Tags</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Unique title tags for each page</li>
+              <li>• Compelling meta descriptions (150-160 chars)</li>
+              <li>• Proper heading structure (H1, H2, H3)</li>
+              <li>• Alt text for all images</li>
+            </ul>
+          </div>
+          
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">URL Structure</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Clean, descriptive URLs</li>
+              <li>• Include target keywords</li>
+              <li>• Use hyphens to separate words</li>
+              <li>• Avoid unnecessary parameters</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. User Experience Optimization -->
+      <section id="user-experience" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">4. User Experience Optimization</h2>
+        
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+          <h3 class="text-xl font-semibold text-white mb-4">Reduce Bounce Rate</h3>
+          <p class="text-gray-300 mb-4">
+            High bounce rates signal to Google that users aren't finding what they're looking for. Improve user experience to keep visitors engaged.
+          </p>
+          <ul class="space-y-2 text-gray-300">
+            <li>• Improve page loading speed</li>
+            <li>• Create clear navigation</li>
+            <li>• Use engaging headlines and content</li>
+            <li>• Add internal links to related content</li>
+            <li>• Optimize for mobile devices</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 5. Page Speed & Performance -->
+      <section id="page-speed" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">5. Page Speed & Performance</h2>
+        
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+          <h3 class="text-xl font-semibold text-white mb-4">Core Web Vitals</h3>
+          <p class="text-gray-300 mb-4">
+            Google's Core Web Vitals are crucial ranking factors. Focus on these three metrics:
+          </p>
+          <div class="grid md:grid-cols-3 gap-4">
+            <div class="bg-green-500/10 border border-green-500/20 p-4 rounded">
+              <h4 class="font-semibold text-green-400 mb-2">LCP (Largest Contentful Paint)</h4>
+              <p class="text-sm text-gray-300">Target: &lt; 2.5 seconds</p>
+            </div>
+            <div class="bg-blue-500/10 border border-blue-500/20 p-4 rounded">
+              <h4 class="font-semibold text-blue-400 mb-2">FID (First Input Delay)</h4>
+              <p class="text-sm text-gray-300">Target: &lt; 100 milliseconds</p>
+            </div>
+            <div class="bg-purple-500/10 border border-purple-500/20 p-4 rounded">
+              <h4 class="font-semibold text-purple-400 mb-2">CLS (Cumulative Layout Shift)</h4>
+              <p class="text-sm text-gray-300">Target: &lt; 0.1</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Mobile-First Optimization -->
+      <section id="mobile-optimization" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">6. Mobile-First Optimization</h2>
+        
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+          <p class="text-gray-300 mb-4">
+            Google uses mobile-first indexing, meaning your mobile version is the primary version used for ranking. Ensure your site is fully optimized for mobile devices.
+          </p>
+          <ul class="space-y-2 text-gray-300">
+            <li>• Responsive design that works on all screen sizes</li>
+            <li>• Touch-friendly buttons and navigation</li>
+            <li>• Fast loading on mobile networks</li>
+            <li>• Readable text without zooming</li>
+            <li>• Easy-to-use forms and interactions</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 7. Image SEO & Optimization -->
+      <section id="image-optimization" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">7. Image SEO & Optimization</h2>
+        
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+          <h3 class="text-xl font-semibold text-white mb-4">Image Best Practices</h3>
+          <ul class="space-y-2 text-gray-300">
+            <li>• Use descriptive, keyword-rich alt text</li>
+            <li>• Optimize file sizes for faster loading</li>
+            <li>• Use WebP format when possible</li>
+            <li>• Include relevant filenames</li>
+            <li>• Add captions for context</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 8. Strategic Internal Linking -->
+      <section id="internal-linking" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">8. Strategic Internal Linking</h2>
+        
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+          <p class="text-gray-300 mb-4">
+            Internal linking helps distribute page authority throughout your site and improves user navigation. Create a logical linking structure that guides users to related content.
+          </p>
+          <ul class="space-y-2 text-gray-300">
+            <li>• Link to relevant pages within your content</li>
+            <li>• Use descriptive anchor text</li>
+            <li>• Create topic clusters around main themes</li>
+            <li>• Include navigation breadcrumbs</li>
+            <li>• Add "Related Articles" sections</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 9. Analytics & Performance Tracking -->
+      <section id="analytics-tracking" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">9. Analytics & Performance Tracking</h2>
+        
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+          <h3 class="text-xl font-semibold text-white mb-4">Essential Tracking Tools</h3>
+          <ul class="space-y-2 text-gray-300">
+            <li>• <strong>Google Search Console:</strong> Monitor search performance and indexing</li>
+            <li>• <strong>Google Analytics:</strong> Track user behavior and traffic sources</li>
+            <li>• <strong>PageSpeed Insights:</strong> Monitor Core Web Vitals</li>
+            <li>• <strong>Lighthouse:</strong> Comprehensive site audits</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 10. Quality Backlink Building -->
+      <section id="backlink-building" class="mb-12">
+        <h2 class="text-3xl font-bold text-white mb-6">10. Quality Backlink Building</h2>
+        
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+          <h3 class="text-xl font-semibold text-white mb-4">Link Building Strategies</h3>
+          <p class="text-gray-300 mb-4">
+            Quality backlinks from authoritative websites are crucial for SEO success. Focus on earning links through valuable content and relationships.
+          </p>
+          <ul class="space-y-2 text-gray-300">
+            <li>• Create link-worthy content (guides, studies, tools)</li>
+            <li>• Guest posting on relevant industry sites</li>
+            <li>• Build relationships with other website owners</li>
+            <li>• Participate in industry forums and communities</li>
+            <li>• Create shareable infographics and resources</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Conclusion -->
+      <section class="mb-12">
+        <div class="bg-orange-500/10 border border-orange-500/20 p-8 rounded-lg">
+          <h2 class="text-2xl font-bold text-white mb-4">Ready to Stop Guessing and Start Ranking?</h2>
+          <p class="text-gray-300 mb-6">
+            Look, I get it - SEO can feel overwhelming. But here's the thing: you don't have to figure this out alone. I've helped over 200 businesses get their websites ranking on page 1 of Google, and I can help you too.
+          </p>
+          <p class="text-gray-300 mb-6">
+            <strong>Here's what happens when you work with us:</strong> Your website starts ranking higher, you get more qualified leads, and you stop wasting money on ads that don't work. Sound good?
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact" class="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors text-center">
+              Get Your Free SEO Audit (Worth $500)
+            </a>
+            <a href="tel:+1-943-234-9570" class="border border-orange-500 text-orange-500 px-6 py-3 rounded-lg hover:bg-orange-500/10 transition-colors text-center">
+              Call Us: (943) 234-9570
+            </a>
+          </div>
+          <p class="text-sm text-gray-400 mt-4">
+            <strong>Limited Time:</strong> We're only taking 5 new SEO clients this month. Don't wait - your competitors are already ranking above you.
+          </p>
+        </div>
+      </section>
+
+      <!-- Author Bio -->
+      <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+        <div class="flex items-start space-x-4">
+          <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+            WS
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-2">Will Sargent</h3>
+            <p class="text-gray-300 mb-4">
+              Hey there! I'm Will, and I've been helping businesses get found online for over 5 years. I've seen what works and what doesn't - and honestly, most people are doing SEO wrong. That's why I started Self Labs, to help businesses like yours actually get results instead of just throwing money at the problem.
+            </p>
+            <p class="text-gray-300 mb-4">
+              <strong>Fun fact:</strong> I've helped over 200 businesses get to page 1 of Google. Want to be next? Let's talk.
+            </p>
+            <div class="flex space-x-4">
+              <a href="/contact" class="text-orange-500 hover:text-orange-400">Get Your Free SEO Audit</a>
+              <a href="tel:+1-943-234-9570" class="text-orange-500 hover:text-orange-400">Call Me: (943) 234-9570</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

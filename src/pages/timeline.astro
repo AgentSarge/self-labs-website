@@ -1,0 +1,316 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const title = "Project Timeline Templates | Self Labs Web Design";
+const description = "Flexible timeline templates for different website packages - from 2-week basic sites to 2-month premium projects. Clear project phases and deliverables.";
+const canonical = "https://selflabs.dev/timeline";
+---
+
+<BaseLayout 
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage="/og-timeline.jpg"
+  ogType="article"
+>
+  <main class="px-4 py-16 md:px-8 lg:px-12">
+    <div class="mx-auto max-w-4xl">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Project Timeline Templates
+        </h1>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          Flexible timeline templates for different website packages - from 2-week basic sites to 2-month premium projects. Clear project phases and deliverables.
+        </p>
+      </div>
+
+      <!-- Introduction -->
+      <div class="bg-white/5 p-6 rounded-lg border border-white/10 mb-12">
+        <p class="text-gray-300 leading-relaxed">
+          Great question! We create flexible timeline templates based on different service packages. This is a smart approach that aligns project scope with realistic timelines.
+        </p>
+      </div>
+
+      <!-- Basic Package -->
+      <section class="mb-16">
+        <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-8">
+          <h2 class="text-3xl font-bold text-green-400 mb-4">🟢 BASIC PACKAGE - 2 Weeks</h2>
+          <p class="text-gray-300 mb-6 italic">Perfect for simple websites, landing pages, or basic business sites</p>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-4">Week 1: Foundation</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li><strong>Day 1-2:</strong> Discovery call + Contract signing</li>
+                <li><strong>Day 3-4:</strong> Asset collection + Kickoff call</li>
+                <li><strong>Day 5:</strong> Sitemap creation</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-4">Week 2: Build & Launch</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li><strong>Day 1-2:</strong> Homepage design (single page focus)</li>
+                <li><strong>Day 3-4:</strong> Development + Content integration</li>
+                <li><strong>Day 5:</strong> Testing + Launch + Basic training</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="mt-6 p-4 bg-green-500/5 rounded border border-green-500/10">
+            <h4 class="font-semibold text-green-400 mb-2">Deliverables:</h4>
+            <p class="text-gray-300">1-3 pages, basic design, mobile responsive, contact form</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Standard Package -->
+      <section class="mb-16">
+        <div class="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-8">
+          <h2 class="text-3xl font-bold text-yellow-400 mb-4">🟡 STANDARD PACKAGE - 1 Month (4 Weeks)</h2>
+          <p class="text-gray-300 mb-6 italic">Ideal for small business websites with multiple pages</p>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-4">Week 1: Discovery & Planning</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li><strong>Day 1-2:</strong> Discovery call + Contract</li>
+                <li><strong>Day 3-4:</strong> Asset collection + Kickoff</li>
+                <li><strong>Day 5:</strong> Sitemap + Wireframes</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-4">Week 2: Design Phase</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li><strong>Day 1-3:</strong> Homepage design</li>
+                <li><strong>Day 4-5:</strong> Interior page designs</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-4">Week 3: Development</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li><strong>Day 1-3:</strong> Frontend development</li>
+                <li><strong>Day 4-5:</strong> Content integration + Forms</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-4">Week 4: Launch</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li><strong>Day 1-2:</strong> Testing + Bug fixes</li>
+                <li><strong>Day 3-4:</strong> Launch + Training</li>
+                <li><strong>Day 5:</strong> Follow-up + Documentation</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="mt-6 p-4 bg-yellow-500/5 rounded border border-yellow-500/10">
+            <h4 class="font-semibold text-yellow-400 mb-2">Deliverables:</h4>
+            <p class="text-gray-300">5-8 pages, custom design, SEO basics, contact forms, basic analytics</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Premium Package -->
+      <section class="mb-16">
+        <div class="bg-red-500/10 border border-red-500/20 rounded-lg p-8">
+          <h2 class="text-3xl font-bold text-red-400 mb-4">🔴 PREMIUM PACKAGE - 2 Months (8 Weeks)</h2>
+          <p class="text-gray-300 mb-6 italic">Comprehensive websites with advanced features and integrations</p>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-4">Week 1-2: Discovery & Strategy</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li><strong>Week 1:</strong> Discovery + Strategy session + Contract</li>
+                <li><strong>Week 2:</strong> Asset collection + Kickoff + Detailed sitemap</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-4">Week 3-4: Design Phase</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li><strong>Week 3:</strong> Homepage design + Design system</li>
+                <li><strong>Week 4:</strong> All page designs + Mobile optimization</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-4">Week 5-6: Development Phase</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li><strong>Week 5:</strong> Frontend development + Custom features</li>
+                <li><strong>Week 6:</strong> Backend integration + Database setup</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-4">Week 7: Testing & Optimization</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li><strong>Day 1-3:</strong> Cross-browser testing + Performance optimization</li>
+                <li><strong>Day 4-5:</strong> SEO optimization + Security setup</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-4">Week 8: Launch & Training</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li><strong>Day 1-2:</strong> Final testing + Launch</li>
+                <li><strong>Day 3-4:</strong> Client training + Documentation</li>
+                <li><strong>Day 5:</strong> Follow-up + Maintenance plan</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="mt-6 p-4 bg-red-500/5 rounded border border-red-500/10">
+            <h4 class="font-semibold text-red-400 mb-2">Deliverables:</h4>
+            <p class="text-gray-300">10+ pages, custom design system, advanced SEO, e-commerce, integrations, analytics, maintenance plan</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Package Comparison Table -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">📊 Package Comparison Table</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white/5 rounded-lg border border-white/10">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th class="text-left p-4 text-white font-semibold">Feature</th>
+                <th class="text-center p-4 text-green-400 font-semibold">Basic (2 weeks)</th>
+                <th class="text-center p-4 text-yellow-400 font-semibold">Standard (1 month)</th>
+                <th class="text-center p-4 text-red-400 font-semibold">Premium (2 months)</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-300">
+              <tr class="border-b border-white/5">
+                <td class="p-4 font-medium">Pages</td>
+                <td class="p-4 text-center">1-3 pages</td>
+                <td class="p-4 text-center">5-8 pages</td>
+                <td class="p-4 text-center">10+ pages</td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="p-4 font-medium">Design</td>
+                <td class="p-4 text-center">Template-based</td>
+                <td class="p-4 text-center">Custom design</td>
+                <td class="p-4 text-center">Full custom design system</td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="p-4 font-medium">SEO</td>
+                <td class="p-4 text-center">Basic meta tags</td>
+                <td class="p-4 text-center">On-page SEO</td>
+                <td class="p-4 text-center">Advanced SEO + strategy</td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="p-4 font-medium">Forms</td>
+                <td class="p-4 text-center">Contact form</td>
+                <td class="p-4 text-center">Multiple forms</td>
+                <td class="p-4 text-center">Advanced forms + CRM</td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="p-4 font-medium">E-commerce</td>
+                <td class="p-4 text-center">❌</td>
+                <td class="p-4 text-center">Basic shop</td>
+                <td class="p-4 text-center">Full e-commerce</td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="p-4 font-medium">Integrations</td>
+                <td class="p-4 text-center">❌</td>
+                <td class="p-4 text-center">Basic (Google Analytics)</td>
+                <td class="p-4 text-center">Advanced (CRM, email, etc.)</td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="p-4 font-medium">Training</td>
+                <td class="p-4 text-center">30 min session</td>
+                <td class="p-4 text-center">1 hour session</td>
+                <td class="p-4 text-center">2+ hour training</td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="p-4 font-medium">Support</td>
+                <td class="p-4 text-center">30 days</td>
+                <td class="p-4 text-center">60 days</td>
+                <td class="p-4 text-center">90 days + maintenance</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium">Revisions</td>
+                <td class="p-4 text-center">2 rounds</td>
+                <td class="p-4 text-center">3 rounds</td>
+                <td class="p-4 text-center">Unlimited (within scope)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Timeline Adjustment Factors -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">🎯 Timeline Adjustment Factors</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">Factors That Might Extend Timelines:</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li><strong>Client responsiveness</strong> (slow feedback = delays)</li>
+              <li><strong>Content creation</strong> (if client provides content vs. you create it)</li>
+              <li><strong>Custom integrations</strong> (payment systems, CRM, etc.)</li>
+              <li><strong>Complex functionality</strong> (user accounts, booking systems, etc.)</li>
+              <li><strong>Multiple stakeholders</strong> (approval processes)</li>
+            </ul>
+          </div>
+          
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">Buffer Time Recommendations:</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li><strong>Basic:</strong> +3-5 days buffer</li>
+              <li><strong>Standard:</strong> +1 week buffer</li>
+              <li><strong>Premium:</strong> +2 weeks buffer</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pro Tips -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">💡 Pro Tips for Timeline Management</h2>
+        
+        <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+          <ol class="space-y-4 text-gray-300">
+            <li class="flex items-start">
+              <span class="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">1</span>
+              <span><strong>Set clear milestones</strong> with specific deliverables</span>
+            </li>
+            <li class="flex items-start">
+              <span class="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">2</span>
+              <span><strong>Include client deadlines</strong> in your timeline (content delivery, feedback, etc.)</span>
+            </li>
+            <li class="flex items-start">
+              <span class="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">3</span>
+              <span><strong>Build in buffer time</strong> for unexpected delays</span>
+            </li>
+            <li class="flex items-start">
+              <span class="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">4</span>
+              <span><strong>Use project management tools</strong> to track progress</span>
+            </li>
+            <li class="flex items-start">
+              <span class="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">5</span>
+              <span><strong>Communicate timeline changes</strong> immediately if delays occur</span>
+            </li>
+            <li class="flex items-start">
+              <span class="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">6</span>
+              <span><strong>Charge rush fees</strong> for timeline compression requests</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Conclusion -->
+      <div class="bg-white/5 p-6 rounded-lg border border-white/10 text-center">
+        <p class="text-gray-300 leading-relaxed">
+          This flexible approach allows you to offer different service levels while maintaining realistic expectations and professional project management. The flexible timeline approach gives you the ability to scale your services based on client needs and budget, while maintaining realistic expectations and professional project delivery. This structure also helps you price your services appropriately based on the time and complexity involved.
+        </p>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
