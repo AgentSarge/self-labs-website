@@ -31,7 +31,7 @@
     </button>
 
     <!-- Form Content -->
-    <div class="p-8">
+    <div id="form-container" class="p-8">
       <h2 class="text-3xl font-black text-white uppercase mb-2">
         Let's Build Something Great
       </h2>
@@ -40,6 +40,7 @@
       </p>
 
       <form
+        id="contact-form"
         name="contact"
         method="POST"
         data-netlify="true"
@@ -271,6 +272,82 @@
         </button>
       </form>
     </div>
+
+    <!-- Success Message (Hidden by default) -->
+    <div id="success-container" class="p-8 hidden">
+      <div class="text-center mb-8">
+        <!-- Success Icon -->
+        <div class="flex justify-center mb-6">
+          <div class="bg-orange rounded-full p-4">
+            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+        </div>
+
+        <h2 class="text-3xl font-black text-white uppercase mb-2">
+          Thanks for reaching out!
+        </h2>
+        <p class="text-eagle mb-2">
+          We've received your message and will respond within 24 hours.
+        </p>
+        <p class="text-white text-sm mb-8">
+          Want to discuss your project sooner?
+        </p>
+      </div>
+
+      <!-- Scheduling Options -->
+      <div class="space-y-4">
+        <h3 class="text-xl font-black text-white uppercase text-center mb-4">
+          Schedule a <span class="text-orange">Meeting</span>
+        </h3>
+
+        <!-- Video Call Button -->
+        <a
+          href="https://calendly.com/self-labs-support/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-between w-full bg-orange hover:bg-white text-white hover:text-black font-black uppercase py-4 px-6 rounded-full transition-colors duration-200 group"
+        >
+          <div class="flex items-center">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+            </svg>
+            <span>Schedule Video Call</span>
+          </div>
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+
+        <!-- In-Person Meeting Button -->
+        <a
+          href="https://calendly.com/self-labs-support/new-meeting"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-between w-full bg-white/10 hover:bg-white/20 text-white font-black uppercase py-4 px-6 rounded-full transition-colors duration-200 group"
+        >
+          <div class="flex items-center">
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            <span>Schedule In-Person Meeting</span>
+          </div>
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+
+        <!-- Skip Button -->
+        <button
+          id="skip-scheduling"
+          class="w-full text-eagle hover:text-white font-bold uppercase py-3 transition-colors text-sm"
+        >
+          Skip for now
+        </button>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -279,6 +356,10 @@
   const openModalButtons = document.querySelectorAll('[data-open-contact]');
   const modal = document.getElementById('contact-modal');
   const closeButton = document.getElementById('close-modal');
+  const contactForm = document.getElementById('contact-form') as HTMLFormElement;
+  const formContainer = document.getElementById('form-container');
+  const successContainer = document.getElementById('success-container');
+  const skipButton = document.getElementById('skip-scheduling');
 
   openModalButtons.forEach(button => {
     button.addEventListener('click', (e) => {
@@ -289,28 +370,64 @@
     });
   });
 
-  // Close modal
-  closeButton?.addEventListener('click', () => {
+  // Handle form submission
+  contactForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(contactForm);
+    
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
+      });
+
+      if (response.ok) {
+        // Show success message with scheduling options
+        formContainer?.classList.add('hidden');
+        successContainer?.classList.remove('hidden');
+      } else {
+        alert('There was an error submitting your form. Please try again.');
+      }
+    } catch (error) {
+      alert('There was an error submitting your form. Please try again.');
+    }
+  });
+
+  // Skip scheduling button
+  skipButton?.addEventListener('click', () => {
+    closeModal();
+  });
+
+  // Close modal function
+  function closeModal() {
     modal?.classList.add('hidden');
     modal?.classList.remove('flex');
     document.body.style.overflow = '';
-  });
+    
+    // Reset form and views after a delay
+    setTimeout(() => {
+      contactForm?.reset();
+      formContainer?.classList.remove('hidden');
+      successContainer?.classList.add('hidden');
+    }, 300);
+  }
+
+  // Close modal
+  closeButton?.addEventListener('click', closeModal);
 
   // Close on outside click
   modal?.addEventListener('click', (e) => {
     if (e.target === modal) {
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-      document.body.style.overflow = '';
+      closeModal();
     }
   });
 
   // Close on Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-      document.body.style.overflow = '';
+      closeModal();
     }
   });
 </script>

@@ -336,14 +336,21 @@ const addons = [
           }),
         });
         
-        const { url, error } = await response.json();
+        const data = await response.json();
         
-        if (error) {
-          alert('Error: ' + error);
+        if (data.error) {
+          // Show more helpful error message
+          if (data.error.includes('Stripe is not configured')) {
+            alert('⚠️ Stripe Setup Required\n\nThe payment system needs to be configured with your Stripe API key.\n\nFor local testing: Add STRIPE_SECRET_KEY to your .env file\nFor production: Add STRIPE_SECRET_KEY in Netlify environment variables');
+          } else {
+            alert('Error: ' + data.error);
+          }
           target.disabled = false;
           target.textContent = originalText;
           return;
         }
+        
+        const { url } = data;
         
         // Redirect to Stripe Checkout
         if (url) {
