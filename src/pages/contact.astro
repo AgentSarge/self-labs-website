@@ -1,0 +1,111 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ContactForm from "@/components/global/ContactForm.astro";
+
+const title = "Contact Self Labs | Get Your Free Website Quote";
+const description = "Ready to get your website built? Contact Will Sargent for a free consultation. Professional web design services in Monroe, Athens, and surrounding Georgia areas.";
+const canonical = "https://self-labs.io/contact";
+---
+
+<BaseLayout 
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage="/contact.jpg"
+  ogType="website"
+>
+  <main class="px-4 py-16 md:px-8 lg:px-12">
+    <div class="mx-auto max-w-4xl">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Let's Build Your Website
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Ready to get your business online? I'm Will Sargent, and I've been helping Georgia businesses get found online for over 5 years. Let's talk about your project.
+        </p>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="mb-16">
+        <ContactForm />
+      </div>
+
+      <!-- Why Choose Local -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">Why Choose a Local Web Designer?</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">🏠 Local Understanding</h3>
+            <p class="text-gray-300">
+              I know Georgia. I understand our local market, our businesses, and what makes our community special. That local knowledge shows up in every website I build.
+            </p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">🤝 Personal Service</h3>
+            <p class="text-gray-300">
+              When you work with me, you're not just another number. I'm your neighbor, and I care about your success. You'll have my direct phone number, not a call center.
+            </p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+            <h3 class="text-xl font-semibold text-white mb-4">💰 Better Value</h3>
+            <p class="text-gray-300">
+              No big agency overhead means better prices for you. Plus, I understand what Georgia businesses actually need - no unnecessary bells and whistles.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Areas -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-white mb-8 text-center">Serving All of Georgia</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-semibold text-white mb-4">Primary Service Areas</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Monroe, GA</li>
+              <li>• Athens, GA</li>
+              <li>• Loganville, GA</li>
+              <li>• Covington, GA</li>
+              <li>• Lawrenceville, GA</li>
+              <li>• Winder, GA</li>
+              <li>• Social Circle, GA</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold text-white mb-4">What I Do</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Custom website design</li>
+              <li>• E-commerce solutions</li>
+              <li>• Local SEO optimization</li>
+              <li>• Mobile-responsive design</li>
+              <li>• Website maintenance</li>
+              <li>• Performance optimization</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="mb-16">
+        <div class="bg-orange/10 border border-orange/20 p-8 rounded-lg text-center">
+          <h2 class="text-2xl font-bold text-white mb-4">Ready to Get Started?</h2>
+          <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+            Don't wait - every day your business doesn't have a professional website is a day you're losing potential customers. Let's get you online and ranking.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+1-943-234-9570" class="bg-orange text-white px-8 py-3 rounded-lg hover:bg-orange/90 transition-colors">
+              Call: (943) 234-9570
+            </a>
+            <a href="mailto:will@self-labs.io" class="border border-orange text-orange px-8 py-3 rounded-lg hover:bg-orange/10 transition-colors">
+              Email: will@self-labs.io
+            </a>
+          </div>
+          <p class="text-sm text-gray-400 mt-4">
+            <strong>Local Georgia Business:</strong> I'm here when you need me, not some call center in another state.
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
