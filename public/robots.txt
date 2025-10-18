@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://self-labs.io/sitemap-index.xml
+Sitemap: https://self-labs.io/sitemap.xml
 
 # Block admin areas (if any)
 Disallow: /admin/
