@@ -1,0 +1,85 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BgGrid from "@/components/assets/BgGrid.astro";
+
+const seoProps = {
+  title: "Thank You! - Self Labs",
+  description: "Your order has been confirmed. We'll be in touch shortly.",
+  canonical: "/success",
+  ogType: "website",
+};
+---
+
+<BaseLayout {...seoProps}>
+  <section class="border-white/20 border-b min-h-[80vh] flex items-center justify-center">
+    <div class="px-8 py-24 relative max-w-3xl mx-auto text-center">
+      <BgGrid />
+      
+      <div class="relative z-10">
+        <!-- Success Icon -->
+        <div class="flex justify-center mb-8">
+          <div class="bg-orange rounded-full p-6">
+            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+        </div>
+
+        <h1 class="text-5xl lg:text-7xl font-black text-white uppercase mb-6">
+          Thank <span class="text-orange">You!</span>
+        </h1>
+        
+        <p class="text-xl text-eagle mb-8">
+          Your order has been confirmed. We've sent a confirmation email with all the details.
+        </p>
+
+        <div class="bg-white/5 border border-white/20 rounded-lg p-8 mb-8">
+          <h2 class="text-2xl font-black text-white uppercase mb-4">What's Next?</h2>
+          <div class="space-y-4 text-left">
+            <div class="flex items-start">
+              <span class="text-orange font-black text-xl mr-4">1.</span>
+              <p class="text-eagle">
+                <strong class="text-white">Check Your Email</strong><br/>
+                We've sent you a confirmation with next steps and a link to schedule your kickoff call.
+              </p>
+            </div>
+            <div class="flex items-start">
+              <span class="text-orange font-black text-xl mr-4">2.</span>
+              <p class="text-eagle">
+                <strong class="text-white">Kickoff Call</strong><br/>
+                We'll reach out within 24 hours to schedule your project kickoff call to discuss requirements.
+              </p>
+            </div>
+            <div class="flex items-start">
+              <span class="text-orange font-black text-xl mr-4">3.</span>
+              <p class="text-eagle">
+                <strong class="text-white">Development Begins</strong><br/>
+                Once we have your requirements, we'll get started on your project right away.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/"
+            class="bg-orange text-white uppercase font-black py-4 px-8 rounded-full hover:bg-orange/90 transition-all duration-200"
+          >
+            Back to Home
+          </a>
+          <a 
+            href="mailto:support@self-labs.io"
+            class="bg-white/10 text-white uppercase font-black py-4 px-8 rounded-full hover:bg-white/20 transition-all duration-200"
+          >
+            Contact Us
+          </a>
+        </div>
+
+        <p class="text-sm text-eagle mt-8">
+          Questions? Email us at <a href="mailto:support@self-labs.io" class="text-orange hover:underline">support@self-labs.io</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

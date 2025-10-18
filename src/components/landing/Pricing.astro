@@ -1,0 +1,361 @@
+---
+import BgGrid from "@/components/assets/BgGrid.astro";
+
+const websiteBuilds = [
+  {
+    id: "basic-website",
+    name: "Basic",
+    price: "$300",
+    priceId: "price_1SJbsUAPWjmeC10nj2G5sZMN",
+    description: "Perfect for small businesses getting started online",
+    features: [
+      "3-5 pages",
+      "Mobile responsive design",
+      "Basic SEO optimization",
+      "Contact form integration",
+      "30-day support",
+      "1-2 week delivery"
+    ],
+    highlighted: false
+  },
+  {
+    id: "standard-website",
+    name: "Standard",
+    price: "$800",
+    priceId: "price_1SJbthAPWjmeC10nf5KoLZ5t",
+    description: "Best for growing businesses that need more features",
+    features: [
+      "5-10 pages",
+      "Custom design",
+      "Advanced SEO optimization",
+      "Contact forms & integrations",
+      "Analytics setup",
+      "60-day support",
+      "2-3 week delivery"
+    ],
+    highlighted: true
+  },
+  {
+    id: "premium-website",
+    name: "Premium",
+    price: "$2,500",
+    priceId: "price_1SJbyVAPWjmeC10nPvZ4sjH7",
+    description: "For businesses that need advanced functionality",
+    features: [
+      "10+ pages",
+      "E-commerce integration",
+      "Advanced custom features",
+      "Premium design",
+      "Priority support",
+      "90-day support",
+      "3-4 week delivery"
+    ],
+    highlighted: false
+  }
+];
+
+const maintenancePackages = [
+  {
+    id: "basic-maintenance",
+    name: "Basic",
+    price: "$50",
+    priceId: "price_1SJbzGAPWjmeC10nxtzA8CLP",
+    billing: "/month",
+    description: "Essential maintenance for your website",
+    features: [
+      "Monthly updates",
+      "Security patches",
+      "2 content changes per month",
+      "Email support",
+      "Basic monitoring"
+    ],
+    highlighted: false
+  },
+  {
+    id: "standard-maintenance",
+    name: "Standard",
+    price: "$100",
+    priceId: "price_1SJbzsAPWjmeC10n2BC7cE2l",
+    billing: "/month",
+    description: "Comprehensive maintenance and support",
+    features: [
+      "Weekly updates",
+      "Security monitoring",
+      "5 content changes per month",
+      "Priority support",
+      "Performance monitoring",
+      "Monthly reports"
+    ],
+    highlighted: true
+  },
+  {
+    id: "premium-maintenance",
+    name: "Premium",
+    price: "$200",
+    priceId: "price_1SJc0bAPWjmeC10nBsha2Ok9",
+    billing: "/month",
+    description: "Complete care for mission-critical sites",
+    features: [
+      "Daily monitoring",
+      "Unlimited content changes",
+      "24/7 priority support",
+      "Performance optimization",
+      "SEO monitoring",
+      "Weekly reports"
+    ],
+    highlighted: false
+  }
+];
+
+const addons = [
+  {
+    id: "seo-audit",
+    name: "SEO Audit & Setup",
+    price: "$150",
+    priceId: "price_1SJc2uAPWjmeC10njyqMYrr4",
+    description: "Comprehensive SEO optimization",
+    features: [
+      "Technical SEO audit",
+      "Google Analytics setup",
+      "Search Console configuration",
+      "Keyword research",
+      "On-page optimization"
+    ]
+  },
+  {
+    id: "rush-service",
+    name: "Priority Rush Service",
+    price: "$200",
+    priceId: "price_1SJc1jAPWjmeC10neobSi5lq",
+    description: "Get your project done faster",
+    features: [
+      "Cut delivery time in half",
+      "Priority in our queue",
+      "Daily progress updates",
+      "Add to any website build"
+    ]
+  }
+];
+---
+
+<section id="pricing" class="border-white/20 border-b">
+  <!-- Website Builds Section -->
+  <div class="px-8 py-6 relative border-b border-white/20">
+    <BgGrid />
+    <h2 class="text-3xl font-black text-white uppercase">
+      Website <span class="text-orange">Builds</span>
+    </h2>
+    <p class="mt-2 text-eagle text-sm">One-time payment. You own the code.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/20">
+    {websiteBuilds.map((plan) => (
+      <div class={`p-8 relative ${plan.highlighted ? 'bg-white/5' : ''}`}>
+        {plan.highlighted && (
+          <div class="absolute top-0 right-0 bg-orange text-black px-4 py-1 text-xs font-black uppercase">
+            Most Popular
+          </div>
+        )}
+        <div class="mt-4">
+          <h3 class="text-2xl font-black text-white uppercase">{plan.name}</h3>
+          <p class="mt-2 text-eagle text-sm">{plan.description}</p>
+          <div class="mt-4">
+            <span class="text-5xl font-black text-white">{plan.price}</span>
+          </div>
+        </div>
+        <ul class="mt-6 space-y-3">
+          {plan.features.map((feature) => (
+            <li class="flex items-start text-sm text-eagle">
+              <svg class="h-5 w-5 text-orange mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              {feature}
+            </li>
+          ))}
+        </ul>
+        <button 
+          data-checkout-btn
+          data-price-id={plan.priceId}
+          data-product-name={`${plan.name} Website Build`}
+          class={`mt-8 w-full uppercase font-black py-4 px-6 rounded-full transition-all duration-200 ${
+            plan.highlighted 
+              ? 'bg-orange text-white hover:bg-orange/90' 
+              : 'bg-white/10 text-white hover:bg-white/20'
+          }`}
+        >
+          Get Started
+        </button>
+      </div>
+    ))}
+  </div>
+
+  <!-- Maintenance Packages Section -->
+  <div class="px-8 py-6 relative border-t border-b border-white/20 mt-12">
+    <BgGrid />
+    <h2 class="text-3xl font-black text-white uppercase">
+      Maintenance <span class="text-orange">Packages</span>
+    </h2>
+    <p class="mt-2 text-eagle text-sm">Keep your site running smoothly. Cancel anytime.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/20">
+    {maintenancePackages.map((plan) => (
+      <div class={`p-8 relative ${plan.highlighted ? 'bg-white/5' : ''}`}>
+        {plan.highlighted && (
+          <div class="absolute top-0 right-0 bg-orange text-black px-4 py-1 text-xs font-black uppercase">
+            Best Value
+          </div>
+        )}
+        <div class="mt-4">
+          <h3 class="text-2xl font-black text-white uppercase">{plan.name}</h3>
+          <p class="mt-2 text-eagle text-sm">{plan.description}</p>
+          <div class="mt-4 flex items-baseline">
+            <span class="text-5xl font-black text-white">{plan.price}</span>
+            <span class="ml-2 text-eagle">{plan.billing}</span>
+          </div>
+        </div>
+        <ul class="mt-6 space-y-3">
+          {plan.features.map((feature) => (
+            <li class="flex items-start text-sm text-eagle">
+              <svg class="h-5 w-5 text-orange mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              {feature}
+            </li>
+          ))}
+        </ul>
+        <button 
+          data-checkout-btn
+          data-price-id={plan.priceId}
+          data-product-name={`${plan.name} Maintenance Package`}
+          data-subscription="true"
+          class={`mt-8 w-full uppercase font-black py-4 px-6 rounded-full transition-all duration-200 ${
+            plan.highlighted 
+              ? 'bg-orange text-white hover:bg-orange/90' 
+              : 'bg-white/10 text-white hover:bg-white/20'
+          }`}
+        >
+          Subscribe Now
+        </button>
+      </div>
+    ))}
+  </div>
+
+  <!-- Add-ons Section -->
+  <div class="px-8 py-6 relative border-t border-white/20 mt-12">
+    <BgGrid />
+    <h2 class="text-3xl font-black text-white uppercase">
+      Add-on <span class="text-orange">Services</span>
+    </h2>
+    <p class="mt-2 text-eagle text-sm">Enhance your website with additional services</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-white/20">
+    {addons.map((addon) => (
+      <div class="p-8">
+        <h3 class="text-2xl font-black text-white uppercase">{addon.name}</h3>
+        <p class="mt-2 text-eagle text-sm">{addon.description}</p>
+        <div class="mt-4">
+          <span class="text-4xl font-black text-white">{addon.price}</span>
+        </div>
+        <ul class="mt-6 space-y-3">
+          {addon.features.map((feature) => (
+            <li class="flex items-start text-sm text-eagle">
+              <svg class="h-5 w-5 text-orange mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              {feature}
+            </li>
+          ))}
+        </ul>
+        <button 
+          data-checkout-btn
+          data-price-id={addon.priceId}
+          data-product-name={addon.name}
+          class="mt-8 w-full bg-white/10 text-white hover:bg-white/20 uppercase font-black py-4 px-6 rounded-full transition-all duration-200"
+        >
+          Add to Order
+        </button>
+      </div>
+    ))}
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="px-8 py-12 border-t border-white/20">
+    <h2 class="text-3xl font-black text-white uppercase mb-8">
+      Frequently Asked <span class="text-orange">Questions</span>
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-lg font-black text-white uppercase mb-2">How long does it take?</h3>
+        <p class="text-eagle text-sm">Basic sites take 1-2 weeks, Standard 2-3 weeks, and Premium 3-4 weeks. Add Priority Rush Service to cut time in half.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-black text-white uppercase mb-2">Do I own the code?</h3>
+        <p class="text-eagle text-sm">Yes! After launch, you own 100% of the code. No strings attached, no recurring fees unless you want maintenance.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-black text-white uppercase mb-2">What's included in maintenance?</h3>
+        <p class="text-eagle text-sm">Updates, security patches, content changes, and support. Plans scale based on your needs—cancel anytime.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-black text-white uppercase mb-2">Can I upgrade later?</h3>
+        <p class="text-eagle text-sm">Absolutely! Start with a Basic build and add features as you grow. We'll credit what you've already paid.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Stripe Checkout Integration
+  const checkoutButtons = document.querySelectorAll('[data-checkout-btn]');
+  
+  checkoutButtons.forEach(button => {
+    button.addEventListener('click', async (e) => {
+      const target = e.currentTarget as HTMLButtonElement;
+      const priceId = target.getAttribute('data-price-id');
+      const productName = target.getAttribute('data-product-name');
+      const isSubscription = target.getAttribute('data-subscription') === 'true';
+      
+      // Disable button and show loading state
+      target.disabled = true;
+      const originalText = target.textContent;
+      target.textContent = 'Loading...';
+      
+      try {
+        // Call your API endpoint to create a Stripe checkout session
+        const response = await fetch('/api/create-checkout-session', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            priceId,
+            productName,
+            isSubscription
+          }),
+        });
+        
+        const { url, error } = await response.json();
+        
+        if (error) {
+          alert('Error: ' + error);
+          target.disabled = false;
+          target.textContent = originalText;
+          return;
+        }
+        
+        // Redirect to Stripe Checkout
+        if (url) {
+          window.location.href = url;
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Something went wrong. Please try again.');
+        target.disabled = false;
+        target.textContent = originalText;
+      }
+    });
+  });
+</script>
+

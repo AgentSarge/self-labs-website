@@ -1,0 +1,48 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Pricing from "@/components/landing/Pricing.astro";
+import Cta from "@/components/landing/Cta.astro";
+
+const seoProps = {
+  title: "Pricing - Self Labs | Affordable Website Design & Development",
+  description: "Transparent pricing for professional websites. One-time builds from $300-$2,500 or monthly maintenance from $50-$200/month. No hidden fees.",
+  canonical: "/pricing",
+  ogType: "website",
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "PriceSpecification",
+    "name": "Self Labs Pricing",
+    "description": "Website design and development pricing",
+    "url": "https://self-labs.io/pricing",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Basic Website Build",
+        "price": "300",
+        "priceCurrency": "USD",
+        "description": "3-5 pages, mobile responsive, basic SEO"
+      },
+      {
+        "@type": "Offer",
+        "name": "Standard Website Build",
+        "price": "800",
+        "priceCurrency": "USD",
+        "description": "5-10 pages, custom design, advanced SEO"
+      },
+      {
+        "@type": "Offer",
+        "name": "Premium Website Build",
+        "price": "2500",
+        "priceCurrency": "USD",
+        "description": "10+ pages, e-commerce, advanced features"
+      }
+    ]
+  }
+};
+---
+
+<BaseLayout {...seoProps}>
+  <Pricing />
+  <Cta />
+</BaseLayout>
+
