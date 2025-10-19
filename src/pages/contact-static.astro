@@ -1,0 +1,36 @@
+---
+// This is a static page to test Netlify Forms detection
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Static Contact Form Test</title>
+</head>
+<body>
+    <h1>Static Contact Form Test</h1>
+    
+    <form name="contact-static" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact-static" />
+        <p class="hidden">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+        
+        <p>
+            <label>Name: <input type="text" name="name" /></label>
+        </p>
+        
+        <p>
+            <label>Email: <input type="email" name="email" /></label>
+        </p>
+        
+        <p>
+            <label>Message: <textarea name="message"></textarea></label>
+        </p>
+        
+        <p>
+            <button type="submit">Send</button>
+        </p>
+    </form>
+</body>
+</html>
