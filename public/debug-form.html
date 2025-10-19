@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Form Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, textarea { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        button { background: #ff6b35; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #e55a2b; }
+        .success { color: green; margin-top: 20px; }
+        .error { color: red; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Debug Form Test</h1>
+    <p>This form should submit to Netlify and show up in your dashboard.</p>
+    
+    <form name="debug-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="debug-form" />
+        <p class="hidden">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+        
+        <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" required />
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Your Email *</label>
+            <input type="email" id="email" name="email" required />
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        
+        <button type="submit">Submit Test Form</button>
+    </form>
+    
+    <div class="success">
+        <h3>After submitting:</h3>
+        <ol>
+            <li>Check your Netlify dashboard → Forms</li>
+            <li>Look for "debug-form" in the Active forms list</li>
+            <li>Click on it to see submissions</li>
+            <li>Check both "Verified" and "Spam" sections</li>
+        </ol>
+    </div>
+</body>
+</html>
