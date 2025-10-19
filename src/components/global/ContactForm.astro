@@ -381,8 +381,30 @@
     });
   });
 
-  // Netlify Forms handles submission automatically
-  // No JavaScript needed for form submission
+  // Handle form submission with AJAX for modal forms
+  contactForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(contactForm);
+    
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
+      });
+
+      if (response.ok) {
+        // Show success message
+        formContainer?.classList.add('hidden');
+        successContainer?.classList.remove('hidden');
+      } else {
+        alert('There was an error submitting your form. Please try again.');
+      }
+    } catch (error) {
+      alert('There was an error submitting your form. Please try again.');
+    }
+  });
 
   // Skip scheduling button
   skipButton?.addEventListener('click', () => {
