@@ -20,6 +20,12 @@ exports.handler = async (event, context) => {
     const phone = formData.phone || 'No phone provided';
     const message = formData.message || 'No message provided';
     const projectType = formData['project-type'] || 'Not specified';
+    const budget = formData.budget || 'Not specified';
+    const timeline = formData.timeline || 'Not specified';
+    const features = formData['features[]'] || 'None selected';
+    
+    // Log all form data for debugging
+    console.log('Received form data:', JSON.stringify(formData, null, 2));
     
     // Create SMS message
     const smsMessage = `New form submission from ${formName}:
@@ -27,6 +33,9 @@ Name: ${name}
 Email: ${email}
 Phone: ${phone}
 Project: ${projectType}
+Budget: ${budget}
+Timeline: ${timeline}
+Features: ${features}
 Message: ${message.substring(0, 100)}${message.length > 100 ? '...' : ''}`;
 
     // Send SMS via Twilio
