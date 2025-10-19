@@ -30,15 +30,29 @@ Project: ${projectType}
 Message: ${message.substring(0, 100)}${message.length > 100 ? '...' : ''}`;
 
     // Send SMS via Twilio
-    await sendSMS(smsMessage);
-    
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ 
-        success: true, 
-        message: 'SMS notification sent successfully' 
-      })
-    };
+    try {
+      await sendSMS(smsMessage);
+      
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ 
+          success: true, 
+          message: 'SMS notification sent successfully' 
+        })
+      };
+    } catch (smsError) {
+      console.error('SMS sending failed:', smsError);
+      
+      // Return success even if SMS fails, so form submission still works
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ 
+          success: true, 
+          message: 'Form received but SMS notification failed',
+          error: smsError.message
+        })
+      };
+    }
     
   } catch (error) {
     console.error('Error processing webhook:', error);
@@ -58,8 +72,14 @@ async function sendSMS(message) {
   const fromNumber = process.env.TWILIO_PHONE_NUMBER;
   const toNumber = process.env.YOUR_PHONE_NUMBER;
   
+  console.log('Environment variables check:');
+  console.log('TWILIO_ACCOUNT_SID:', accountSid ? 'SET' : 'MISSING');
+  console.log('TWILIO_AUTH_TOKEN:', authToken ? 'SET' : 'MISSING');
+  console.log('TWILIO_PHONE_NUMBER:', fromNumber ? 'SET' : 'MISSING');
+  console.log('YOUR_PHONE_NUMBER:', toNumber ? 'SET' : 'MISSING');
+  
   if (!accountSid || !authToken || !fromNumber || !toNumber) {
-    throw new Error('Missing Twilio credentials. Please set environment variables.');
+    throw new Error(`Missing Twilio credentials. Account SID: ${accountSid ? 'SET' : 'MISSING'}, Auth Token: ${authToken ? 'SET' : 'MISSING'}, From: ${fromNumber ? 'SET' : 'MISSING'}, To: ${toNumber ? 'SET' : 'MISSING'}`);
   }
   
   const twilioUrl = `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`;
