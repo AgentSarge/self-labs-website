@@ -394,9 +394,8 @@
       });
 
       if (response.ok) {
-        // Show success message with scheduling options
-        formContainer?.classList.add('hidden');
-        successContainer?.classList.remove('hidden');
+        // Redirect to success page for proper conversion tracking
+        window.location.href = '/success';
       } else {
         alert('There was an error submitting your form. Please try again.');
       }
