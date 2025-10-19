@@ -1,34 +1,4 @@
 ---
-// Handle form submission
-if (Astro.request.method === 'POST') {
-  const formData = await Astro.request.formData();
-  
-  // Extract form data
-  const name = formData.get('name') as string;
-  const email = formData.get('email') as string;
-  const phone = formData.get('phone') as string;
-  const projectType = formData.get('project-type') as string;
-  const budget = formData.get('budget') as string;
-  const timeline = formData.get('timeline') as string;
-  const features = formData.getAll('features[]') as string[];
-  const message = formData.get('message') as string;
-  
-  // Log the submission (you can replace this with email sending, database storage, etc.)
-  console.log('Form submission received:', {
-    name,
-    email,
-    phone,
-    projectType,
-    budget,
-    timeline,
-    features,
-    message,
-    timestamp: new Date().toISOString()
-  });
-  
-  // Redirect to success page
-  return Astro.redirect('/success');
-}
 ---
 
 <!-- Modal Overlay -->
@@ -74,9 +44,18 @@ if (Astro.request.method === 'POST') {
         id="contact-form"
         name="contact"
         method="POST"
-        action=""
+        action="/success"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
         class="space-y-4"
       >
+        <!-- Netlify Forms Setup -->
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hidden">
+          <label>
+            Don't fill this out if you're human: <input name="bot-field" />
+          </label>
+        </p>
 
         <!-- Name -->
         <div>
@@ -402,8 +381,8 @@ if (Astro.request.method === 'POST') {
     });
   });
 
-  // Let Netlify handle form submission completely
-  // No JavaScript interference with form submission
+  // Netlify Forms handles submission automatically
+  // No JavaScript needed for form submission
 
   // Skip scheduling button
   skipButton?.addEventListener('click', () => {
