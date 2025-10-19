@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Action</title>
+</head>
+<body>
+    <h1>Test Form Action</h1>
+    <p>This tests if the action="/success" is causing the issue.</p>
+    
+    <form name="test-action" method="POST" action="/success" data-netlify="true">
+        <input type="hidden" name="form-name" value="test-action" />
+        
+        <p>
+            <label>Name: <input type="text" name="name" /></label>
+        </p>
+        
+        <p>
+            <label>Email: <input type="email" name="email" /></label>
+        </p>
+        
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+    
+    <p><strong>Test:</strong> Fill out and submit. Do you get redirected to /success?</p>
+</body>
+</html>
