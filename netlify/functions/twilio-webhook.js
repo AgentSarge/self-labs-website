@@ -10,6 +10,10 @@ exports.handler = async (event, context) => {
   }
 
   try {
+    // Log the raw event body for debugging
+    console.log('Raw event body:', event.body);
+    console.log('Event headers:', event.headers);
+    
     // Parse the form submission data
     const formData = JSON.parse(event.body);
     
