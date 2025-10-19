@@ -1,4 +1,34 @@
 ---
+// Handle form submission
+if (Astro.request.method === 'POST') {
+  const formData = await Astro.request.formData();
+  
+  // Extract form data
+  const name = formData.get('name') as string;
+  const email = formData.get('email') as string;
+  const phone = formData.get('phone') as string;
+  const projectType = formData.get('project-type') as string;
+  const budget = formData.get('budget') as string;
+  const timeline = formData.get('timeline') as string;
+  const features = formData.getAll('features[]') as string[];
+  const message = formData.get('message') as string;
+  
+  // Log the submission (you can replace this with email sending, database storage, etc.)
+  console.log('Form submission received:', {
+    name,
+    email,
+    phone,
+    projectType,
+    budget,
+    timeline,
+    features,
+    message,
+    timestamp: new Date().toISOString()
+  });
+  
+  // Redirect to success page
+  return Astro.redirect('/success');
+}
 ---
 
 <!-- Modal Overlay -->
@@ -44,18 +74,9 @@
         id="contact-form"
         name="contact"
         method="POST"
-        action="/success"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
+        action=""
         class="space-y-4"
       >
-        <!-- Netlify Form Setup -->
-        <input type="hidden" name="form-name" value="contact" />
-        <p class="hidden">
-          <label>
-            Don't fill this out if you're human: <input name="bot-field" />
-          </label>
-        </p>
 
         <!-- Name -->
         <div>
@@ -381,15 +402,8 @@
     });
   });
 
-  // Handle form submission - let Netlify handle it natively
-  contactForm?.addEventListener('submit', (e) => {
-    // Show success message immediately for better UX
-    formContainer?.classList.add('hidden');
-    successContainer?.classList.remove('hidden');
-    
-    // Let the form submit naturally to Netlify
-    // The action="/success" will handle the redirect
-  });
+  // Let Netlify handle form submission completely
+  // No JavaScript interference with form submission
 
   // Skip scheduling button
   skipButton?.addEventListener('click', () => {

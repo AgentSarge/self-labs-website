@@ -5,6 +5,27 @@ import ContactForm from "@/components/global/ContactForm.astro";
 const title = "Contact Self Labs | Get Your Free Website Quote";
 const description = "Ready to get your website built? Contact Will Sargent for a free consultation. Professional web design services in Monroe, Athens, and surrounding Georgia areas.";
 const canonical = "https://self-labs.io/contact";
+
+// Handle form submission for test form
+if (Astro.request.method === 'POST') {
+  const formData = await Astro.request.formData();
+  
+  // Extract form data
+  const name = formData.get('name') as string;
+  const email = formData.get('email') as string;
+  const message = formData.get('message') as string;
+  
+  // Log the submission
+  console.log('Test form submission received:', {
+    name,
+    email,
+    message,
+    timestamp: new Date().toISOString()
+  });
+  
+  // Redirect to success page
+  return Astro.redirect('/success');
+}
 ---
 
 <BaseLayout 
@@ -31,21 +52,32 @@ const canonical = "https://self-labs.io/contact";
         <ContactForm />
       </div>
 
-      <!-- Hidden static form for Netlify detection -->
-      <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
-        <input type="hidden" name="form-name" value="contact" />
-        <p class="hidden">
-          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-        </p>
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="tel" name="phone" />
-        <input type="text" name="project-type" />
-        <input type="text" name="budget" />
-        <input type="text" name="timeline" />
-        <input type="text" name="features[]" />
-        <textarea name="message"></textarea>
-      </form>
+      <!-- Test Form - Simple static form for debugging -->
+      <div class="mb-16 bg-white/5 p-8 rounded-lg border border-white/10">
+        <h2 class="text-2xl font-bold text-white mb-6">Test Form (Debug)</h2>
+        <form name="contact-test" method="POST" action="">
+          
+          <div class="mb-4">
+            <label for="test-name" class="block text-white font-bold mb-2">Name *</label>
+            <input type="text" id="test-name" name="name" required class="w-full px-4 py-3 bg-black border border-white/20 text-white rounded-lg" />
+          </div>
+          
+          <div class="mb-4">
+            <label for="test-email" class="block text-white font-bold mb-2">Email *</label>
+            <input type="email" id="test-email" name="email" required class="w-full px-4 py-3 bg-black border border-white/20 text-white rounded-lg" />
+          </div>
+          
+          <div class="mb-4">
+            <label for="test-message" class="block text-white font-bold mb-2">Message *</label>
+            <textarea id="test-message" name="message" required rows="4" class="w-full px-4 py-3 bg-black border border-white/20 text-white rounded-lg"></textarea>
+          </div>
+          
+          <button type="submit" class="bg-orange text-white px-8 py-3 rounded-lg hover:bg-orange/90 transition-colors">
+            Submit Test Form
+          </button>
+        </form>
+      </div>
+
 
       <!-- Why Choose Local -->
       <section class="mb-16">
