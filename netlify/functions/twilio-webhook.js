@@ -17,16 +17,17 @@ exports.handler = async (event, context) => {
     // Parse the form submission data
     const formData = JSON.parse(event.body);
     
-    // Extract form fields
+    // Extract form fields from the nested data object
     const formName = formData.form_name || 'Unknown Form';
-    const name = formData.name || 'No name provided';
-    const email = formData.email || 'No email provided';
-    const phone = formData.phone || 'No phone provided';
-    const message = formData.message || 'No message provided';
-    const projectType = formData['project-type'] || 'Not specified';
-    const budget = formData.budget || 'Not specified';
-    const timeline = formData.timeline || 'Not specified';
-    const features = formData['features[]'] || 'None selected';
+    const data = formData.data || {};
+    const name = data.name || 'No name provided';
+    const email = data.email || 'No email provided';
+    const phone = data.phone || 'No phone provided';
+    const message = data.message || 'No message provided';
+    const projectType = data['project-type'] || 'Not specified';
+    const budget = data.budget || 'Not specified';
+    const timeline = data.timeline || 'Not specified';
+    const features = Array.isArray(data.features) ? data.features.join(', ') : 'None selected';
     
     // Log all form data for debugging
     console.log('Received form data:', JSON.stringify(formData, null, 2));
