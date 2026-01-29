@@ -18,7 +18,6 @@
     "@tailwindcss/typography": "^0.5.16",
     "astro": "^5.14.5",
     "dotenv": "^17.2.3",
-    "npm": "^11.4.2",
     "stripe": "^19.1.0",
     "typescript": "^5.9.3"
   },
